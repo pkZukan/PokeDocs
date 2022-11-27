@@ -1,0 +1,107 @@
+
+enum ConditionType : uint32 {
+    Less = 0,
+    L_Equal,
+    Greater,
+    G_Equal,
+    Equal,
+    N_Equal,
+}
+
+enum StateType : uint32 {
+    Normal = 0,
+    Entry,
+    Exit,
+    Any,
+    Top,
+}
+//Grabbed these from Godot, need to test
+enum TransitionType : uint32 {
+    Immediate = 0,
+    Sync = 1,
+    AtEnd = 2,
+}
+
+union ConditionValue {
+    ConditionValue_Int, 
+    ConditionValue_Float, 
+    ConditionValue_Bool, 
+    ConditionValue_Trigger
+}
+
+table ConditionValue_Int {
+    value:uint32;
+}
+
+table ConditionValue_Float {
+    value:float;
+}
+
+table ConditionValue_Bool {
+    value:int8;
+}
+
+table ConditionValue_Trigger {
+    value:uint8;
+}
+
+table ResourceLabel {
+    resource_name: string;
+    resource_type: uint32;
+}
+
+table Source {
+    label: ResourceLabel;
+    //Why would a state machine
+    //Have an identity matrix...
+    x1: float;
+    x2: float;
+    y1: float;
+    y2: float;
+    z1: float;
+    z2: float;
+    w1: float;
+    w2: float;
+}
+
+table Condition {
+    name: string;
+    func: ConditionType;
+    value: ConditionValue;
+}
+
+table Transition {
+    path: string;
+    has_exit_time: uint32;
+    exit_time: float;
+    duration: float;
+    offset: float;
+    can_interrupt: uint32;
+    conditions: [Condition];
+    type:TransitionType;
+}
+
+table State {
+    path: string;
+    type: StateType;
+    tag: string;
+    source: Source;
+    transitions: [Transition];
+    states: [State];
+    flags: [string];
+}
+
+table TopState {
+    name: string;
+    payload: State;
+}
+
+table ChannelStates {
+    state_machines: [TopState];
+}
+
+table TRACS {
+    states: ChannelStates;
+}
+
+root_type TRACS;

@@ -1,0 +1,41 @@
+struct Vec3 {
+    x: float;
+    y: float;
+    z: float;
+}
+
+table LookAt{
+        channel_name: string;
+        min_rot:Vec3;
+        max_rot:Vec3;
+        unk_3: uint32;
+        unk_4: float;
+        unk_5: float;
+        unk_6: float;
+        unk_7: float;
+        res_8: float;
+        res_9: float;
+        unk_10: float;
+        unk_11: uint32 = 0x5;
+        res_12: uint32 = 0x0;
+        unk_13: [uint32];
+        unk_14: [uint32];
+        unk_15: Vec3;
+        unk_16: uint8 = 0x1;
+        unk_17: [float];
+        unk_18: uint8 = 0x1;
+        unk_19: [float];
+        unk_20: float;
+        track_name: [string];
+        unk_22: float;
+}
+table TRALK {
+        res_0: uint32 = 0x0;
+        unk_1: [LookAt];
+        unk_2: uint32 = 0x1;
+        unk_3: uint8 = 0x1;
+        unk_4: float;
+        bone_name: string;
+}
+
+root_type TRALK;

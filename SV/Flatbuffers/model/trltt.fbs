@@ -1,0 +1,33 @@
+namespace Titan.Model;
+
+struct Vec3f {
+  x: float;
+  y: float;
+  z: float;
+}
+
+struct Vec3i {
+  x: int32;
+  y: int32;
+  z: int32;
+}
+
+table Table2 {
+	shape_name: string;
+}
+
+table LookupTable {
+  shape_name: string;
+  name: string;
+  unk_2: Vec3i;
+  mesh_names: [string];
+  base_shape: [Table2];
+  some_positions: [Vec3f];
+}
+
+table TRLTT {
+  res_0: uint32;
+  entries: [LookupTable];
+}
+
+root_type TRLTT;

@@ -1,0 +1,41 @@
+union EffectValue {
+    EffectValue_Int,
+    EffectValue_Float,
+    EffectValue_Byte,
+    EffectValue_String,
+}
+
+table EffectValue_Int {
+    value: uint32;
+}
+
+table EffectValue_Float {
+    value: float;
+}
+
+table EffectValue_Byte {
+    value: uint8;
+}
+
+table EffectValue_String {
+    value: string;
+}
+
+table Effect {
+    name: string;
+    value: EffectValue;
+}
+
+table AnimationEffect {
+        res_0: uint32;
+        path: string;
+        start: uint32;
+        duration: uint32;
+        effects: [Effect];
+}
+
+table TRAEF{
+    effects: [AnimationEffect];
+}
+
+root_type TRAEF;

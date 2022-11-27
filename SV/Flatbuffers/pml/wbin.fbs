@@ -1,0 +1,24 @@
+table WazaFieldTop {
+    unk_0: uint32;
+}
+
+table WazaFieldMiddle {
+    unk_0: uint32;
+}
+
+table WazaValueField {
+    type: uint8;
+    value: uint32;
+}
+
+table WazaSeq {
+    unk0: WazaFieldTop;
+    unk1: WazaFieldMiddle;
+    values: [WazaValueField];
+}
+
+table WBIN {
+    sequence: [WazaSeq];
+}
+
+root_type WBIN;

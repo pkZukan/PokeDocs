@@ -1,0 +1,88 @@
+namespace Titan.Animation;
+
+file_extension "tracm";
+
+union TrackFlag {
+    TrackFlag_Bool,
+}
+
+table TrackFlag_Bool {
+    value: bool;
+}
+
+table TrackFlagsInfo {
+    values: TrackFlag;
+}
+
+table TrackFlags {
+    res_0: uint32;
+    res_1: uint32;
+    info: TrackFlagsInfo;
+}
+
+table TrackMaterialValue {
+    time: float;
+    value: float;
+    config_0: uint32;
+    config_1: uint32;
+    config_2: uint32;
+}
+
+table TrackMaterialValueList {
+    values: [TrackMaterialValue];
+}
+
+table TrackMaterialInit {
+    name: string;
+    list: TrackMaterialValueList;
+}
+
+table TrackMaterialChannels {
+	red: TrackMaterialValueList;
+	green: TrackMaterialValueList;
+	blue: TrackMaterialValueList;
+	alpha: TrackMaterialValueList;
+}
+
+table TrackMaterialAnim {
+    name: string;
+    list: TrackMaterialChannels;
+}
+
+table TrackMaterial {
+    name: string;
+    init_values: [TrackMaterialInit];
+    anim_values: [TrackMaterialAnim];
+}
+
+table TrackMaterialTimeline {
+    res_0: uint32;
+    res_1: uint32;
+    material_track: [TrackMaterial];
+    unk_3: uint8; //maybe track length related?
+    unk_4: uint8; //maybe track length related?
+}
+
+table Track {
+    track_path: string;
+    res_1: uint32; //Never used
+    res_2: uint32; //Never used
+    res_3: uint32; //Never used
+    material_animation: TrackMaterialTimeline;
+    material_flags: TrackFlags;
+}
+
+table TrackConfig {
+    res_0: uint32;
+    duration: uint32;
+    framerate: uint32;
+}
+
+table TRACM {
+    config: TrackConfig;
+    tracks: [Track];
+    len_1: uint8; //Related to length of tracks?
+    len_2: uint8; //Related to length of tracks?
+}
+
+root_type TRACM;

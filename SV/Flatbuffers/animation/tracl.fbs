@@ -1,0 +1,37 @@
+table ChannelName{
+        name: string;
+}
+
+table ChannelList{
+        isList: bool = false;
+        list: [ChannelName];
+}
+
+table ChannelUnknown {
+        res_0: uint32;
+}
+
+table Channels{
+        list: ChannelList;
+        unk_1: ChannelUnknown;
+        unk_2: ChannelUnknown;
+}
+
+table Node_Child{
+        index: uint32 = 0;
+        name: string;
+        channels: Channels;
+        unk: uint32 = 0;
+}
+
+table Node_Root{
+        children: [Node_Child];
+        channels: Channels;
+        name: [string];
+}
+
+table TRACL{
+        root: Node_Root;
+}
+
+root_type TRACL;

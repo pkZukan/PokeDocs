@@ -1,0 +1,87 @@
+struct Vec4 {
+    x: float;
+    y: float;
+    z: float;
+    w: float;
+}
+
+struct RGB8 {
+    r: uint8;
+    g: uint8;
+    b: uint8;
+}
+
+table TerrainOrigin {
+    x: float;
+    y: float;
+    z: float;
+    bound_vec: Vec4;
+}
+
+table TerrainBounds {
+    max_x: float;
+    max_y: float;
+    max_z: float;
+    cell_span: uint32;
+    cell_total: uint32;
+}
+
+table UnkBounds{
+    min: Vec4;
+    max: Vec4;
+}
+
+
+table SplatConfig {
+    width: uint32;
+    height: uint32;
+    default_col: RGB8;
+}
+
+table DynamicInstance {
+    filename: string;
+    instances: [string];
+}
+
+table StaticInstance {
+    filename: string;
+    unk_1: float;
+    unk_2: float;
+    unk_3: float;
+    unk_4: float;
+    unk_5: float;
+    unk_6: Vec4;
+    unk_7: Vec4;
+    unk_8: uint32;
+    unk_9: uint32;
+    unk_10: float;
+    unk_11: float;
+    unk_12: float;
+    unk_13: float;
+    unk_14: float;
+    unk_15: float;
+    unk_16: float;
+    unk_17: float;
+    unk_18: float;
+}
+
+table SplatMaterial {
+    filename: string;
+}
+
+table TRTRR{
+    origin: TerrainOrigin;
+    bounds: TerrainBounds;
+    splat_config: SplatConfig;
+    instance_count: uint32;
+    instances: [DynamicInstance];
+    grass_count: uint32;
+    grass_instance: [StaticInstance];
+    splat_material: SplatMaterial;
+    terrain_buffers: [string];
+    res_9: uint32 = 0x0;
+    unk_10: UnkBounds;
+}
+
+
+root_type TRTRR;

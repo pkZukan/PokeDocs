@@ -1,0 +1,72 @@
+namespace Titan.Model;
+
+file_extension "trskl";
+
+struct Vec3 {
+        x: float;
+        y: float;
+        z: float;
+}
+
+struct Vec4 {
+        w: float;
+        x: float;
+        y: float;
+        z: float;  
+}
+
+enum NodeType: uint32 {
+        Default = 0,
+        Chained = 1, //Present for finger bones
+        Floating = 2, //Present for eye, mouth and feet bones
+}
+
+table Transform {
+        VecScale: Vec3;
+        VecRot: Vec3;
+        VecTranslate: Vec3;
+}
+
+table TransformNode {
+        name: string;
+        transform: Transform;
+        scalePivot: Vec3;
+        rotatePivot: Vec3;
+        parent_idx: int32 = -1;
+        rig_idx: int32 = -1;
+        effect_node: string;
+        type: NodeType;
+}
+
+table IKControl{
+        ik_name: string;
+        ik_chain_start: string;
+        ik_chain_end: string;
+        ik_type: string;
+        res_4: uint32; //Always 0
+        ik_pos: Vec3;
+        ik_rot: Vec4;
+}
+
+table BoneMatrix{
+        x: Vec3;
+        y: Vec3;
+        z: Vec3;
+        w: Vec3;
+}
+
+table Bone {
+        inherit_position: uint8; //Value (0,1) Probably SegmentScaleCompensate?
+        unk_bool_2: uint8 = 0; //Always set to 1
+        matrix: BoneMatrix;
+}
+
+table TRSKL {
+        res_0: uint32;
+        transform_nodes: [TransformNode];
+        bones: [Bone];
+        iks: [IKControl];
+        rig_offset: uint32;
+}
+
+root_type TRSKL;

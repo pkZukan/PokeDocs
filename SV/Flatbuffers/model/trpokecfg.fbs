@@ -1,0 +1,21 @@
+namespace Titan.Model;
+
+file_extension "trpokecfg";
+
+table TRPOKECFG {
+        unk_0: uint8;
+        unk_1: float;
+        unk_2: float;
+        unk_3: float;
+        unk_4: float;
+        unk_5: float;
+        unk_6: float;
+        unk_7: float;
+        unk_8: float;
+        unk_9: float;
+        unk_10: float;
+        unk_11: float;
+        unk_12: float;
+}
+
+root_type TRPOKECFG;

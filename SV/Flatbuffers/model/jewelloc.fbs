@@ -1,0 +1,27 @@
+table Unk0 {
+    unk0: uint32;
+    unk1: float;
+}
+
+table Unk1 {
+    res0: uint32;
+}
+
+table Unk2 {
+    x: float;
+    y: float;
+    z: float;
+}
+
+table JewelLoc {
+    name: string;
+    unk0: Unk0;
+    unk1: Unk1;
+    unk2: Unk2;
+}
+
+table JewelLocs {
+    list: [JewelLoc];
+}
+
+root_type JewelLocs;

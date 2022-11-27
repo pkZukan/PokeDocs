@@ -1,0 +1,19 @@
+table EvoData {
+    method: uint16;
+    argument: uint16;
+    species: uint16;
+    form: uint16;
+    level: uint16;
+}
+
+table Evo {
+    evo_num: uint16 = 0;
+    evo_unk: uint16 = 0;
+    evo_data: [EvoData];
+}
+
+table EvoBin {
+    evos: [Evo];
+}
+
+root_type EvoBin;

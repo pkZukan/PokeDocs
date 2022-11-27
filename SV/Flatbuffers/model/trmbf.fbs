@@ -1,0 +1,32 @@
+namespace Titan.Model;
+
+file_extension "trmbf";
+
+table Indexes {
+    buffer:[ubyte];
+}
+
+table Vertices {
+    buffer: [ubyte];
+}
+
+table MorphBuffer {
+    buffer: [ubyte];
+}
+
+table Morphs {
+    morph_buffer: [MorphBuffer];
+}
+
+table Buffer {
+    index_buffer: [Indexes];
+    vertex_buffer: [Vertices];
+    morphs: [Morphs];
+}
+
+table TRMBF {
+    unused: uint32;
+    buffers:[Buffer];
+}
+
+root_type TRMBF;

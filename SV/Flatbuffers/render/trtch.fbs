@@ -1,0 +1,12 @@
+table Technique {
+    param_name: string;
+    shader_name: string;
+    destination: string;
+}
+
+table TRTCH {
+    res_0: uint32;
+    technique: [Technique];
+}
+
+root_type TRTCH;

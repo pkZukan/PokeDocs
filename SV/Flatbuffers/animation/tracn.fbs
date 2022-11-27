@@ -1,0 +1,12 @@
+namespace Titan.Animation;
+
+table AnimationEntry{
+        animation_name: string;
+        filename: string;
+}
+
+table TRACN {
+    list: [AnimationEntry];
+}
+
+root_type TRACN;

@@ -1,0 +1,26 @@
+table SlotMapping {
+    string_value: string;
+    uint_value: uint32;
+}
+
+table SlotMap {
+    slot_name: string;
+    slot_values: [SlotMapping];
+    bool_1: uint8;
+    bool_2: uint8;
+    bool_3: uint8;
+    slot_index: uint8;
+    offset: uint32;
+}
+
+table TRSHA {
+    name: string;
+    file_name: string;
+    shader_param: [SlotMap];
+    global_param: [SlotMap];
+    param_buffer: [uint32];
+    has_shader_param: bool = false; //maybe contains shader_param
+    has_global_param: bool = false; //maybe contains global_param
+}
+
+root_type TRSHA;
