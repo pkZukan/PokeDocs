@@ -1,0 +1,161 @@
+namespace Hayabusa.Model;
+
+file_extension "trmsh";
+
+enum VertexAttribute : uint32 {
+    NONE = 0,
+    POSITION,
+    NORMAL,
+    TANGENT,
+    BINORMAL,
+    COLOR,
+    TEX_COORD,
+    BLEND_INDICES,
+    BLEND_WEIGHTS,
+    USER,
+}
+
+enum MorphAttribute: uint32  {
+    NONE = 0,
+    POSITION = 1,
+    MIN_LIMIT = 2,
+    MAX_LIMIT = 3,
+    USER_ID = 10,
+}
+
+enum Type: uint32 {
+    NONE = 0,
+    R8_G8_B8_A8_UNSIGNED_NORMALIZED = 20,
+    W8_X8_Y8_Z8_UNSIGNED = 22,
+    X32_UINT = 36,
+    X32_INT = 37,
+    W16_X16_Y16_Z16_SIGNED_NORMALIZED = 39,
+    W16_X16_Y16_Z16_FLOAT = 43,
+    X32_Y32_FLOAT = 48,
+    X32_Y32_Z32_FLOAT = 51,
+    W32_X32_Y32_Z32_FLOAT = 54,
+}
+
+enum PolygonType: uint32 {
+    X8_Y8_Z8_UNSIGNED = 0,
+    X16_Y16_Z16_UNSIGNED,
+    X32_Y32_Z32_UNSIGNED,
+    X64_Y64_Z64_UNSIGNED,
+}
+
+struct Sphere {
+    x:float;
+    y:float;
+    z:float;
+    radius:float;
+}
+
+struct Vec4 {
+    w:float;
+    x:float;
+    y:float;
+    z:float;
+}
+
+struct Vec3 {
+    x:float;
+    y:float;
+    z:float;
+}
+
+table BoundingBox {
+    min: Vec3;
+    max: Vec3;
+}
+
+table Influence {
+    //TODO: Fuck around with this value
+    index: uint32;
+    scale: float;
+}
+
+table VertexAccessor {
+    attr_0: int32 = -1;
+    attribute: VertexAttribute = 0;
+    attribute_layer: uint32 = 0; //Chooses which Color or UV layer to use
+    type: Type;
+    position: uint32 = 0;
+}
+
+table VertexSize {
+    size: uint32;
+}
+
+table VertexAccessors {
+    attrs: [VertexAccessor];
+    size: [VertexSize];
+}
+
+table MaterialInfo {
+    poly_count: uint32;
+    poly_offset: uint32;
+    sh_unk3: uint32;
+    material_name: string;
+    sh_unk4: int32 = -1;
+}
+
+table MorphAccessor {
+    unk_0: uint32;
+    attribute: MorphAttribute = 0;
+    unk_1: uint32 = 0;
+    type: Type;
+    position: uint32;
+}
+
+table MorphSize {
+    size: uint32;
+}
+
+table MorphData {
+    attrs: [MorphAccessor];
+    size: [MorphSize];
+}
+
+table MorphMetaData {
+    morph_index: uint32;
+    morph_name: string;
+    morph_type: uint8;
+}
+
+table MorphShape {
+    data: [MorphData];
+    metadata: [MorphMetaData];
+    morph_name: string;
+}
+
+table VisShape {
+    index: uint32;
+    name: string;
+}
+
+table MeshShape {
+    mesh_shape_name: string;
+    bounds: BoundingBox;
+    polygon_type: PolygonType;
+    attributes: [VertexAccessors];
+    materials: [MaterialInfo];
+    //Always zero for these four
+    res0: uint32 = 0;
+    res1: uint32 = 0;
+    res2: uint32 = 0;
+    res3: uint32 = 0;
+    clip_sphere: Sphere;
+    influence: [Influence];
+    vis_shapes: [VisShape]; // Maybe shape name?
+    mesh_name: string;
+    unk13: uint32;
+    morph_shape: [MorphShape];
+}
+
+table TRMSH {
+    unk0: uint32;
+    meshes:[MeshShape];
+    buffer_name:string;
+}
+
+root_type TRMSH;

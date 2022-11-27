@@ -1,0 +1,101 @@
+file_extension "trmtr";
+
+struct RGBA {
+        r: float;
+        g: float;
+        b: float;
+        a: float;
+}
+
+enum UVWrapMode: uint32 {
+        WRAP = 0,
+        CLAMP = 1,
+        MIRROR = 2,
+        BORDER = 3,
+        MIRROR_ONCE = 4,
+        UNK6 = 6,
+        UNK7 = 7,
+}
+
+table SamplerState {
+        SamplerState_0: uint32 = 0x0; //Never used
+        SamplerState_1: uint32 = 0x0; //Never used
+        SamplerState_2: uint32 = 0x0; //Never used
+        SamplerState_3: uint32 = 0x0; //Never used
+        SamplerState_4: uint32 = 0x0; //Never used
+        SamplerState_5: uint32 = 0x0; //Never used
+        SamplerState_6: uint32 = 0x0; //Never used
+        SamplerState_7: uint32 = 0x0; //Never used
+        SamplerState_8: uint32 = 0x0; //Never used
+        repeat_u: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
+        repeat_v: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
+        repeat_w: UVWrapMode = WRAP; //Never used
+        border_color: RGBA;
+}
+
+table Float4Parameter {
+        color_name: string;
+        color_value: RGBA; 
+}
+
+
+table FloatValue {
+        float_name: string;
+        float_value: float;
+}
+
+table IntValue {
+        int_name: string;
+        int_value: int32 = -1;
+}
+
+table StringValue {
+        string_name: string;
+        string_value: string;
+}
+
+table Shader {
+        shader_name: string;
+        shader_values: [StringValue];
+}
+
+table Texture  {
+        texture_name: string;
+        texture_file: string;
+        texture_slot: uint32 = 0;
+}
+
+table ByteTable {
+        value: uint8 = 0x2; //Only pm0448 has it as 0x1
+}
+
+table IntTable {
+        res_0: uint32; //Never present
+        unk_1: int32 = -1;
+}
+
+table Material{
+        name: string; 
+        shaders: [Shader]; 
+        textures: [Texture];
+        samplers: [SamplerState]; 
+        float_values: [FloatValue];
+        unk_5: string; //Always empty
+        light: [Float4Parameter];
+        float4_parameter: [Float4Parameter];
+        unk_8: string; //Always empty
+        int_values: [IntValue];
+        unk_10: string; //Always empty
+        unk_11: string; //Always empty
+        unk_12: string; //Always empty
+        byte_value: ByteTable;
+        uint_value: IntTable;
+        alpha_type: string;
+}
+
+table TRMTR{
+        res_0: uint32;
+        materials: [Material];
+}
+
+root_type TRMTR;

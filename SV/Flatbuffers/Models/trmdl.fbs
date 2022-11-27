@@ -1,0 +1,48 @@
+file_extension "trmdl";
+
+struct Vec3 {
+  x:float;
+  y:float;
+  z:float;
+}
+
+struct Vec4 {
+  x:float;
+  y:float;
+  z:float;
+  w:float;
+}
+
+table Mesh {
+  filename: string;
+}
+
+table Skeleton {
+  filename: string;
+}
+
+table LodIndex {
+  unk0: uint32 = 0;
+}
+
+table Lod {
+  index: [LodIndex];
+  lod_type: string;
+}
+
+table Bounds {
+  min: Vec3;
+  max: Vec3;
+}
+
+table TRMDL {
+  unk0:uint32;
+  meshes:[Mesh];
+  skeleton:Skeleton;
+  materials:[string];
+  lods:[Lod];
+  bounds: Bounds;
+  unk_vec:Vec4;
+}
+
+root_type TRMDL;
