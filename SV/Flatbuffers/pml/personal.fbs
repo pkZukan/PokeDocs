@@ -1,14 +1,12 @@
 struct SpeciesInfo {
-    species_index: uint16;
-    species_form: uint16;
-    species_model: uint16;
+    species: uint16;
+    form: uint16;
+    model: uint16;
     color: uint8;
-    bodytype: uint8;
+    body_type: uint8;
     weight: uint16;
     height: uint16;
-    res0: uint32;
-    res1: uint32;
-    res2: uint32;
+    reserved: [uint8:0xC];
 }
 
 struct StatInfo {
@@ -20,50 +18,62 @@ struct StatInfo {
     SPE: uint8;
 }
 
-struct GenderData {
-    group: uint8;
+struct GenderInfo {
+    group: uint8; // 0 = Random, 1 = Male, 2 = Female, 3 = Genderless
     ratio: uint8;
 }
 
-struct EvoData {
+struct EggHatchInfo {
     species: uint16;
     form: uint16;
-    region: uint16;
-    can_evolve: uint16;
+    form_flags: uint16; // bit0 = Inherit Everstone Form
+    form_everstone: uint16;
 }
 
-struct ZukanData {
-    index: uint16;
-    group: uint8;
+struct EvoData {
+    level: uint16;
+    condition: uint16;
+    parameter: [uint16:4];
+    species: uint16;
+    form: uint16;
 }
 
-table PersonalData {
+struct LevelupMoveData {
+    move: uint16;
+    level: uint16;
+}
+
+table Personal {
     species: SpeciesInfo;
     is_present: bool;
-    dex: ZukanData;
-    type1: uint8;
-    type2: uint8;
-    ability1: uint16;
-    ability2: uint16;
-    ability3: uint16;
+    dex_index: uint16;
+    type_1: uint8;
+    type_2: uint8;
+    ability_1: uint16;
+    ability_2: uint16;
+    ability_3: uint16;
     growth: uint8;
-    rate: uint8;
-    gender: GenderData;
-    group_1: uint8;
-    group_2: uint8;
-    evolution_data: EvoData;
-    hatch_steps: uint8;
+    catch_rate: uint8;
+    gender: GenderInfo;
+    egg_group_1: uint8;
+    egg_group_2: uint8;
+    egg_hatch: EggHatchInfo;
+    egg_hatch_steps: uint8;
     base_friendship: uint8;
-    unk_value: uint16;
+    exp_addend: int16;
     evo_stage: uint8;
     unk_flag: uint8;
-    yield_info: StatInfo;
-    stats: StatInfo;
-    evo_table: uint32;
-
+    ev_yield: StatInfo;
+    base_stats: StatInfo;
+    evo_data:[EvoData];
+    tm_moves:[uint16];
+    egg_moves:[uint16];
+    reminder_moves:[uint16];
+    levelup_moves:[LevelupMoveData];
 }
 
 table PersonalTable {
-    entries:[PersonalData];
+    entry:[Personal];
 }
+
 root_type PersonalTable;
