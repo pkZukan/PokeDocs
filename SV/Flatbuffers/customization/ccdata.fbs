@@ -1,0 +1,26 @@
+file_extension "ccdata";
+
+table someTable2 {
+    unk0: string;
+    unk1: string;
+    unk2: string;
+}
+
+table Entry {
+    name: string;
+    unk0: byte;
+    model_file: string;
+    material_file: string;
+    unk2: byte;
+    unk3: string;
+    anim_files: [string];
+}
+
+table CharacterCreationData {
+    entries: [Entry];
+    unk1: someTable2;
+    unk2: uint;
+    unk3: string;
+}
+
+root_type CharacterCreationData;

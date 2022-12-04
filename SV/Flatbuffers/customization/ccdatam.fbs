@@ -1,0 +1,13 @@
+file_extension "ccdatam";
+
+table Entry {
+    name: string;
+    ccdata_file: string;
+    unk0: string;
+}
+
+table CharacterCreationDataMaster {
+    entries: [Entry];
+}
+
+root_type CharacterCreationDataMaster;
