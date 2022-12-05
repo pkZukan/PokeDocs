@@ -37,6 +37,11 @@ struct ZukanData {
     group: uint8;
 }
 
+struct Move {
+	move: uint16;
+	level: int8;
+}
+
 table PersonalData {
     species: SpeciesInfo;
     is_present: bool;
@@ -60,7 +65,10 @@ table PersonalData {
     yield_info: StatInfo;
     stats: StatInfo;
     evo_table: uint32;
-
+	technical_machines: [uint16];
+	egg_moves: [uint16];
+	reminder_moves: [uint16];
+	learnset: [Move];
 }
 
 table PersonalTable {
