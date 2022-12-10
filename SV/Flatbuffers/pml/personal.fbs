@@ -4,8 +4,8 @@ struct SpeciesInfo {
     species_model: uint16;
     color: uint8;
     bodytype: uint8;
-    weight: uint16;
     height: uint16;
+    weight: uint16;
     res0: uint32;
     res1: uint32;
     res2: uint32;
@@ -38,8 +38,8 @@ struct ZukanData {
 }
 
 struct Move {
-	move: uint16;
-	level: int8;
+    move: uint16;
+    level: int8;
 }
 
 table PersonalData {
@@ -65,10 +65,10 @@ table PersonalData {
     yield_info: StatInfo;
     stats: StatInfo;
     evo_table: uint32;
-	technical_machines: [uint16];
-	egg_moves: [uint16];
-	reminder_moves: [uint16];
-	learnset: [Move];
+    technical_machines: [uint16];
+    egg_moves: [uint16];
+    reminder_moves: [uint16];
+    learnset: [Move];
 }
 
 table PersonalTable {
