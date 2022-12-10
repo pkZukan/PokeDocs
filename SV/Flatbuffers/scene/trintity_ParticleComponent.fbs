@@ -1,0 +1,11 @@
+namespace Titan.TrinityScene;
+
+table trintity_ParticleComponent {
+    particle_file: string;
+    unk_1: [uint32];
+    res_2: uint32;
+    particle_name: string;
+    particle_parent: string;
+}
+
+root_type trintity_ParticleComponent;

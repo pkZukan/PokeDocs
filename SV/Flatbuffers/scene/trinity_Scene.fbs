@@ -1,0 +1,185 @@
+namespace Titan.TrinityScene;
+
+table ti_AIPerceptualComponent {
+}
+
+table ti_CaptureComponent {
+}
+
+table ti_DynamicExclusionComponent {
+    unk_0: uint8;
+}
+
+table ti_EnvSoundComponent {
+}
+
+table ti_FieldPokemonComponent {
+}
+
+table ti_PokemonModelComponent {
+}
+
+table ti_PokemonModelComponentForSimpleParam {
+}
+
+table ti_pokemonObject {
+}
+
+table ti_PokeVoiceComponent {
+}
+
+table trinity_AnimationComponent {
+}
+
+table trinity_AtmosphereComponent {
+}
+
+table trinity_AttachmentComponent {
+}
+
+table trinity_CameraAnimationComponent {
+}
+
+table trinity_CharacterCreationComponent {
+}
+
+table trinity_CollisionEventTriggerComponent {
+}
+
+table trinity_CombineLODEntity {
+}
+
+table trinity_CombineObjectGroup {
+}
+
+table trinity_CompoundBoxShape {
+}
+
+table trinity_CompoundCapsuleShape {
+}
+
+table trinity_CompoundPencilShape {
+}
+
+table trinity_CompoundSphereShape {
+}
+
+table trinity_ConditionalStreamingArea {
+}
+
+table trinity_ConditionalStreamingConstraint {
+}
+
+table trinity_ConditionalStreamingGroup {
+}
+
+table trinity_ConditionalStreamingReset {
+}
+
+table trinity_config {
+}
+
+table trinity_DecalComponent {
+}
+
+table trinity_EnvironmentParameter {
+}
+
+table trinity_EventStateEventTriggerComponent {
+}
+
+table trinity_GrassCollisionComponent {
+}
+
+table trinity_GridStremingGroup {
+}
+
+table trinity_JointPrioritySetting {
+}
+
+table trinity_LayoutCommonResourceComponent {
+}
+
+table trinity_LayoutComponent {
+}
+
+table trinity_LightApplierComponent {
+}
+
+table trinity_LightDirectApplierComponent {
+}
+
+table trinity_Locator {
+}
+
+table trinity_ModelComponent {
+}
+
+table trinity_ModelCullingSetting {
+}
+
+table trinity_ModelInstancerComponent {
+}
+
+table trinity_ModelLodSetting {
+}
+
+table trinity_NavigatorComponent {
+}
+
+table trinity_NavmeshComponent {
+}
+
+table trinity_ObjectSwitcher {
+}
+
+table trinity_OverrideSensorData {
+}
+
+table trinity_ProgressEventTriggerComponent {
+}
+
+table trinity_SceneController {
+}
+
+table trinity_SceneObjectReference {
+}
+
+table trinity_TerrainCollision {
+}
+
+table trinity_TerrainEntity {
+}
+
+table trinity_TerrainStreamingSetting {
+}
+
+table trinity_TerrainTreeTemplate {
+}
+
+table trinity_TerrainTreeTemplateRoot {
+}
+
+table trinity_TextureBufferComponent {
+}
+
+table trinity_VATComponent {
+}
+
+table SceneEntry {
+    type_name: string;
+    nested_type: [uint8];
+    sub_objects: [SceneEntry];
+}
+
+table trinity_Scene {
+    scene_name: string;
+    scene_extra: string;
+    res_2: uint32;
+    res_3: uint32;
+    scene_object_list: [SceneEntry];
+    res_4: [uint32];
+    unk_6: uint8;
+}
+
+root_type trinity_Scene;

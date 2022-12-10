@@ -1,0 +1,20 @@
+namespace Titan.TrinityScene;
+
+table trinity_CameraEntity {
+    camera_name: string;
+    res_1: uint32;
+    unk_2: Vec3f;
+    unk_3: Vec3f;
+    unk_4: float;
+    unk_5: float;
+    unk_6: float;
+    unk_7: float;
+    res_8: uint32;
+    unk_9: uint8;
+    unk_10: [uint32];
+    res_11: uint32;
+    res_12: uint32;
+    res_13: uint8;
+}
+
+root_type trinity_CameraEntity;

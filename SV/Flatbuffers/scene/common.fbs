@@ -1,0 +1,11 @@
+struct Vec3f {
+    x: float;
+    y: float;
+    z: float;
+}
+
+table SRT {
+    scale: Vec3f;
+    rotation: Vec3f;
+    translation: Vec3f;
+}

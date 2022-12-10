@@ -1,0 +1,7 @@
+namespace Titan.TrinityScene;
+
+table pe_AudioPlayerComponent {
+	
+}
+
+root_type pe_AudioPlayerComponent;

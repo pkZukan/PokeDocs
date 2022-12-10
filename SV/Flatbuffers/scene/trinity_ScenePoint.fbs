@@ -1,0 +1,11 @@
+include "common.fbs";
+
+namespace Titan.TrinityScene;
+
+table trinity_ScenePoint {
+    point_name: string;
+    point_location: Vec3f;
+    point_unk: uint8;
+}
+
+root_type trinity_ScenePoint;

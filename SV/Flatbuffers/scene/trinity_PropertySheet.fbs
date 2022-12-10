@@ -1,0 +1,24 @@
+namespace Titan.TrinityScene;
+
+table someTable3 {
+	unk0: uint64;
+	unk1: bool;
+}
+
+table Property {
+	name: string;
+	value: bool;
+	unk1: someTable3;
+}
+
+table Entry {
+	properties: [Property];
+}
+
+table trinity_PropertySheet {
+	name: string;
+	template: string;
+	entries: [Entry];
+}
+
+root_type trinity_PropertySheet;

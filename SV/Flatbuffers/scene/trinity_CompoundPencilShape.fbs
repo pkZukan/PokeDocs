@@ -1,0 +1,14 @@
+include "common.fbs";
+
+namespace Titan.TrinityScene;
+
+table trinity_CompoundPencilShape {
+	name: string;
+	unk0: Vec3f;
+	unk1: float;
+	unk2: float;
+	unk3: float;
+	unk4: uint32;
+}
+
+root_type trinity_CompoundPencilShape;

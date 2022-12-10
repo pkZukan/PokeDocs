@@ -1,0 +1,12 @@
+namespace Titan.TrinityScene;
+
+table trinity_ObjectTemplate {
+    object_name: string;
+    template_name: string;
+    file_path: string;
+    unk_3: uint8;
+    object_type: string;
+    object_bytes: [uint8];
+}
+
+root_type trinity_ObjectTemplate;

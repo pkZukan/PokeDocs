@@ -1,0 +1,10 @@
+namespace Titan.TrinityScene;
+
+table ti_FieldAttributePickerComponent {
+	unk0: float;
+	unk1: float;
+	unk2: float;
+	unk3: float;
+}
+
+root_type ti_FieldAttributePickerComponent;

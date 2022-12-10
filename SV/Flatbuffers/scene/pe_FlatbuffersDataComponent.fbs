@@ -1,0 +1,8 @@
+namespace Titan.TrinityScene;
+
+table pe_FlatbuffersDataComponent {
+	data_fbs: string;
+	unk0: string;
+}
+
+root_type pe_FlatbuffersDataComponent;

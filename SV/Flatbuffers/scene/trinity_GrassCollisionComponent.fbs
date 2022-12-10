@@ -1,0 +1,9 @@
+namespace Titan.TrinityScene;
+
+table trinity_GrassCollisionComponent {
+	name: string;
+	min: float;
+	max: float;
+}
+
+root_type trinity_GrassCollisionComponent;

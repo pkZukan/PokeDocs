@@ -1,0 +1,12 @@
+namespace Titan.TrinityScene;
+
+table trinity_ScriptComponent {
+    script_file: string;
+    script_hash: string;
+    res_2: uint32;
+    res_3: uint32;
+    res_4: uint32;
+    class_name: string;
+}
+
+root_type trinity_ScriptComponent;
