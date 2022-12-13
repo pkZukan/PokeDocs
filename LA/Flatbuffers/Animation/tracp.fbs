@@ -1,0 +1,39 @@
+namespace Hayabusa.Animation;
+
+file_extension "tracp";
+
+table Animation {
+    name: string;
+    res_1: uint32 = 0;
+    unk_2: uint32;
+    unk_3: uint32;
+}
+
+table Moves {
+    name: string;
+    x: float;
+    y: float;
+    z: float;
+}
+
+table Switch {
+    name: string;
+    val: bool;
+}
+
+table Trigger {
+    name: string;
+}
+
+table Entry{
+        animations: [Animation];
+        moves: [Moves];
+        switches: [Switch];
+        triggers: [Trigger];
+}
+
+table TRACP {
+    root_node: Entry;
+}
+
+root_type TRACP;

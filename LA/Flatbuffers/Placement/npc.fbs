@@ -1,0 +1,64 @@
+table Vec3Table {
+    x: float;
+    y: float;
+    z: float;
+}
+
+table Condition {
+    condition_type: uint64;
+    condition: uint64;
+    condition_arg_1: string;
+    condition_arg_2: string;
+    condition_arg_3: string;
+    condition_arg_4: string;
+    condition_arg_5: string;
+    translate: Vec3Table;
+    rotate: Vec3Table;
+    scale: Vec3Table;
+}
+
+table List2{
+    unk_0: uint32;
+    unk_1: string;
+    unk_2: string;
+    res_3: uint32;
+    unk_4: uint32; //0, 1 or 2
+    unk_5: uint32;
+    flag_6: uint32; //0 or 1
+    unk_7: uint32;
+    flag_8: uint32; //0 or 1
+    flag_9: uint32; //0 or 1
+    unk_10: uint32; //0 or 2
+    unk_11: uint32; //0 or 2
+    res_12: uint32;
+    res_13: uint32;
+    bool_14: uint8;
+    res_15: uint32;
+    bool_16: uint8;
+    hash_17: uint64;
+    hash_18: uint64;
+    unk_19: uint32; //Only found 0xA
+    hash_20: uint64;
+    unk_21: uint32; //0, 1 or 3
+    npc_sub_name: string;
+    res_23: uint32;
+    bool_24: uint8;
+    res_25: uint32;
+    res_26: uint32;
+    unk_27: string;
+}
+
+table NPC {
+    name: string;
+    name_hash: uint64; //FNV64a of name
+    model_set_hash: uint64;
+    unk_hash: uint64;
+    condition: [Condition];
+    list2: [List2];
+}
+
+table NPCList {
+    list: [NPC];
+}
+
+root_type NPCList;

@@ -1,0 +1,49 @@
+include "structs.fbs";
+
+namespace GFLib.Model;
+
+table TransparencyGroupNode {
+  boneIndex:uint32;
+  //Possible values: -1, 0, 1, 2
+  draw_layer:uint32;
+  //Always a descending array
+  bone_children:[uint32];
+  collisionVolume:Box;
+}
+
+//TODO: Document the three
+enum BoneType : uint32 {
+  Transform = 0, //Used for area and effect rigs
+  Joint = 1, //Used for normal rigs
+  Locator = 2, //Unused for the most part
+  Transparency_Group = 3, //Used for "Alphas", "Transparency", "Okus" and "Adds"
+}
+
+
+//TODO: Mostly seen in effects, Beams are type 1, Marks or BGs are type 2
+enum BillboardType: uint32 {
+  None = 0,
+  AxisY = 1,
+  AxisXY = 2,
+}
+
+table Bone {
+  name:string;
+  type: BoneType = 0; //0, 1, 2, 3
+  parent: int32 = 0; //0, 1, 2 or -1
+  effect: BillboardType = 0; //0, 1, 2, mostly seen in effects (ee, em and ew)
+
+  segment_scale_compensate: bool = 0; // What
+
+  VecScale: Vec3;
+  VecRot: Vec3;
+  VecTranslate: Vec3;
+
+  //Used for envelope bones?
+  VecScalePivot: Vec3;
+  VecRotatePivot: Vec3;
+
+  //Have seen these mostly in area regions and effect bones
+  //Only present when value is 0
+  is_skin: uint8 = 1; 
+}

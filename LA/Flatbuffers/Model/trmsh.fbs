@@ -1,0 +1,114 @@
+namespace Hayabusa.Model;
+
+file_extension "trmsh";
+
+enum Attribute : uint32 {
+    NONE = 0,
+    POSITION,
+    NORMAL,
+    TANGENT,
+    BINORMAL,
+    COLOR,
+    TEX_COORD,
+    BLEND_INDICES,
+    BLEND_WEIGHTS,
+}
+
+enum Type: uint32 {
+    NONE = 0,
+    R8_G8_B8_A8_UNSIGNED_NORMALIZED = 20,
+    W8_X8_Y8_Z8_UNSIGNED = 22,
+    W16_X16_Y16_Z16_SIGNED_NORMALIZED = 39,
+    W16_X16_Y16_Z16_FLOAT = 43,
+    X32_Y32_FLOAT = 48,
+    X32_Y32_Z32_FLOAT = 51,
+    W32_X32_Y32_Z32_FLOAT = 54,
+}
+
+enum PolygonType: uint32 {
+    X8_Y8_Z8_UNSIGNED = 0,
+    X16_Y16_Z16_UNSIGNED,
+    X32_Y32_Z32_UNSIGNED,
+    X64_Y64_Z64_UNSIGNED,
+}
+
+struct Sphere {
+    x:float;
+    y:float;
+    z:float;
+    radius:float;
+}
+
+struct Vec4 {
+    w:float;
+    x:float;
+    y:float;
+    z:float;
+}
+
+struct Vec3 {
+    x:float;
+    y:float;
+    z:float;
+}
+
+table BoundingBox {
+    min: Vec3;
+    max: Vec3;
+}
+
+table Influence {
+    //TODO: Fuck around with this value
+    index: uint32;
+    scale: float;
+}
+
+table VertexAttribute {
+    attr_0: int32 = -1;
+    attribute: Attribute = 0;
+    attribute_layer: uint32 = 0; //Chooses which Color or UV layer to use
+    type: Type;
+    position: uint32 = 0;
+}
+
+table VertexSize {
+    size: uint32;
+}
+
+table VertexAttributes {
+    attrs: [VertexAttribute];
+    size: [VertexSize];
+}
+
+table MaterialInfo {
+    poly_count: uint32;
+    poly_offset: uint32;
+    sh_unk3: uint32;
+    material_name: string;
+    sh_unk4: int32 = -1;
+}
+
+table MeshShape {
+    mesh_shape_name: string;
+    bounds: BoundingBox;
+    polygon_type: PolygonType;
+    attributes: [VertexAttributes];
+    materials: [MaterialInfo];
+    //Always zero for these four
+    res0: uint32 = 0;
+    res1: uint32 = 0;
+    res2: uint32 = 0;
+    res3: uint32 = 0;
+    clip_sphere: Sphere;
+    influence: [Influence];
+    mesh_unk7: [uint32]; // Maybe shape name?
+    mesh_name: string;
+}
+
+table TRMSH {
+    unk0: uint32;
+    meshes:[MeshShape];
+    buffer_name:string;
+}
+
+root_type TRMSH;

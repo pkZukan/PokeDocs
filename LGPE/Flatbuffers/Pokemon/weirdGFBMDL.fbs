@@ -1,0 +1,60 @@
+//Have only found Vec3 so far
+union ColorTypes {Vec3}
+union ValueTypes {FloatVal, unkVal, IntVal}
+
+table IntVal {
+  unk1: int32;
+}
+
+table unkVal {
+  unk: uint32;
+}
+
+table FloatVal {
+  unk1: float;
+}
+
+table Vec3 {
+  unk1: float;
+  unk2: float;
+  unk3: float;
+}
+
+table BoolEntry {
+  name: string;
+}
+
+table ColorEntry {
+	name:string;
+	color:ColorTypes;
+}
+
+table ValueEntry {
+	name:string;
+	value:ValueTypes;
+}
+
+table Material {
+	name:string;
+	booleans:[BoolEntry];
+	values:[ValueEntry];
+	colors:[ColorEntry];
+}
+
+table MaterialTable {
+  materials: [Material];
+}
+
+table info {
+  doesLoop: uint32;
+  frameCount: uint32;
+  frameRate: uint32;
+}
+
+table GFBSomething {
+  t_ver:info;
+  missing:uint32;
+  material:MaterialTable;
+}
+
+root_type GFBSomething;

@@ -1,0 +1,54 @@
+namespace Hayabusa.Resource;
+
+file_extension "bin";
+
+table Animations {
+    folder_path: [string]; //First value is base, usually empty string
+    animation_path: [string];
+}
+
+table Meshes {
+    folder_path: [string]; //First value is base, usually empty string
+    mesh_path: [string];
+    mesh_flags: [string]; //Can hide certain meshes like "hide_a_mesh"
+}
+
+table Rigs {
+    rigs: [string];
+}
+
+table ColorConfig {
+    slots: [string]; //First value is base, usually empty string
+    r1: [uint32];
+    g1: [uint32];
+    b1: [uint32];
+    r2: [uint32];
+    g2: [uint32];
+    b2: [uint32];
+    r3: [uint32];
+    g3: [uint32];
+    b3: [uint32];
+}
+
+table Set {
+    npc_hash: uint64;
+    npc_index: string;
+    unk_set_2: uint64;
+    anims: Animations;
+    meshes: Meshes;
+    rigs: Rigs;
+    attachment_0: string;
+    attachment_1: string;
+    attachment_2: string;
+    colors: ColorConfig;
+    value_list_id: string;
+    unk_set_11: [uint32];
+    archive_path: string;
+    unk_float: float;
+}
+
+table NPCModelSet {
+    sets: [Set];
+}
+
+root_type NPCModelSet;

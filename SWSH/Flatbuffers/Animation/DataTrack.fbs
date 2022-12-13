@@ -1,0 +1,20 @@
+namespace GFLib.Anim;
+
+union DataTrack {IntDataTrack, FloatDataTrack, ByteDataTrack, StringDataTrack}
+
+table IntDataTrack {
+  value:uint32;
+}
+
+table FloatDataTrack {
+  value:float;
+}
+
+table ByteDataTrack {
+  value:uint8;
+}
+
+table StringDataTrack {
+  value:string;
+}
+

@@ -1,0 +1,85 @@
+namespace Hayabusa.PokemonLib;
+
+file_extension "perbin";
+
+//Thanks to pkNX team for this one
+
+table PersonalData {
+        species: uint16;
+        form: uint16 = 0x1;
+
+        isPresent: bool;
+        type1: uint8;
+        type2: uint8;
+
+        ability1: uint16;
+        ability2: uint16;
+        ability3: uint16;
+
+        stat_HP: uint8;
+        stat_ATK: uint8;
+        stat_DEF: uint8;
+        stat_SPA: uint8;
+        stat_SPD: uint8;
+        stat_SPE: uint8;
+        
+        gender: uint8;
+        growth: uint8;
+        stage: uint8;
+        rate: uint8;
+        unk: uint8;
+        color: uint8;
+
+        height: uint16;
+        weight: uint16;
+
+        TM_A: uint32;
+        TM_B: uint32;
+        TM_C: uint32;
+        TM_D: uint32;
+        TR_A: uint32;
+        TR_B: uint32;
+        TR_C: uint32;
+        TR_D: uint32;
+       
+        type_tutor: uint32;
+
+        baseEXP: uint16 = 0x122;
+        
+        EV_HP: uint8;
+        EV_ATK: uint8;
+        EV_DEF: uint8;
+        EV_SPA: uint8;
+        EV_SPD: uint8;
+        EV_SPE: uint8;
+        
+        item_1: uint16;
+        item_2: uint16;
+        item_3: uint16;
+        
+        group_1: uint8;
+        group_2: uint8;
+        
+        hatch_species: uint16;
+        local_form: uint16;
+        unk_45: uint8 ;
+        unk_46: uint16;
+        unk_47: uint8 ;
+        base_friendship: uint8;
+        
+        hisui_dexno: uint16;
+        national_dexno: uint16;
+        hisui_local_1: uint32;
+        hisui_local_2: uint32;
+        hisui_local_3: uint32;
+        hisui_local_4: uint32;
+        hisui_local_5: uint32;
+        
+        move_shop1: uint32;
+        move_shop2: uint32;
+}
+
+table PersonalTable {
+    entries:[PersonalData];
+}
+root_type PersonalTable;

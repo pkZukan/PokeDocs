@@ -1,0 +1,49 @@
+namespace GFLib.Model;
+
+file_extension "gfbmdli";
+
+struct Vec3 {
+  x: float;
+  y: float;
+  z: float;
+}
+
+struct Box {
+  vec1: Vec3;
+  vec2: Vec3;
+}
+
+struct Info {
+  v1: uint16;
+  v2: uint16;
+}
+
+table InstanceData {
+  instanceScale:Vec3;
+  instanceRot:Vec3;
+  instancePos:Vec3;
+}
+
+//Instance
+table Instance {
+  mayaPath:string;
+  mayaName:string;
+  b1:Box;
+  b2:Box;
+  data:[InstanceData];
+}
+
+//GameFreak's naming, not mine
+table ReproMesh {
+  name:string;
+  matrix:Box;
+  instances:[Instance];
+}
+
+table GFBMDLi {
+  version:Info;
+  boundingBox:Box;
+  repromesh:[ReproMesh];
+}
+
+root_type GFBMDLi;

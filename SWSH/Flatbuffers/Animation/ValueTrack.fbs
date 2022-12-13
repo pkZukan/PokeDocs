@@ -1,0 +1,61 @@
+namespace GFLib.Anim;
+
+union FloatTrack { FixedFloatTrack, DynamicFloatTrack, Framed16FloatTrack, Framed8FloatTrack }
+
+table FixedFloatTrack {
+  float:float;
+}
+
+table DynamicFloatTrack {
+  float:[float];
+}
+
+table Framed16FloatTrack {
+  frames:[uint16];
+  float:[float];
+}
+
+table Framed8FloatTrack {
+  frames:[uint8];
+  float:[float];
+}
+
+union ByteTrack { FixedByteTrack, DynamicByteTrack, Framed16ByteTrack, Framed8ByteTrack }
+
+table FixedByteTrack {
+  byte:uint8;
+}
+
+table DynamicByteTrack {
+  byte:[uint8];
+}
+
+table Framed16ByteTrack {
+  frames:[uint16];
+  byte:[uint8];
+}
+
+table Framed8ByteTrack {
+  frames:[uint8];
+  byte:[uint8];
+}
+
+union BooleanTrack { FixedBooleanTrack, DynamicBooleanTrack, Framed16BooleanTrack, Framed8BooleanTrack  }
+
+table FixedBooleanTrack {
+  bool:bool;
+}
+
+table DynamicBooleanTrack {
+  bool:[bool];
+}
+
+table Framed16BooleanTrack {
+  frames:[uint16];
+  bool:[bool];
+}
+
+table Framed8BooleanTrack {
+  frames:[uint8];
+  bool:[bool];
+}

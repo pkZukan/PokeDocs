@@ -1,0 +1,25 @@
+namespace GFLib;
+
+file_extension "gfbpmcatalog";
+
+table Animation {
+  Name:string;
+  Path:string;
+}
+
+table PokemonModel {
+  Species:uint16;
+  Forme:uint16;
+  Gender:uint8;
+  Shiny:uint8;
+  ModelPath:string;
+  ConfigPath:string;
+  ArchivePath:string;
+  Animations:[Animation];
+}
+
+table gfbpmcatalog {
+  Models:[PokemonModel];
+}
+
+root_type gfbpmcatalog ;

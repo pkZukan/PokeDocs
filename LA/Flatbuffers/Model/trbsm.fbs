@@ -1,0 +1,32 @@
+namespace Hayabusa.Model;
+
+table UnkEntry {
+    name: string;
+}
+
+table BoneEntry {
+    name: string;
+    slots: [string];
+    unk_3: float;
+}
+
+table ScalerEntry {
+    name: string;
+    slot_name: [string];
+    unk_3: uint8;
+    unk_4: [float];
+}
+
+table MeshEntry {
+    name: string;
+    slot_name: [string];
+}
+
+table TRBSM {
+    bones: [BoneEntry];
+    scalers: [ScalerEntry];
+    mesh: [MeshEntry];
+    unk: UnkEntry;
+}
+
+root_type TRBSM;

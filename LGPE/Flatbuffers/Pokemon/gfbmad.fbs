@@ -1,0 +1,32 @@
+union AdjustType {
+  AdjustColor,
+  AdjustUnk,
+}
+
+struct Vec3 {
+  r: float;
+  g: float;
+  b: float;
+}
+
+table AdjustUnk {
+  
+}
+
+table AdjustColor {
+  Color:Vec3;
+  undef_1:uint32;
+  Factor:float;
+}
+
+table MaterialAdjust {
+  material_name: string;
+  will_adjust:uint32;
+  adjust:AdjustType;
+}
+
+table materialAdjuster {
+  root: [MaterialAdjust];
+}
+
+root_type materialAdjuster;

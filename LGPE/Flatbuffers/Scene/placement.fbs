@@ -1,0 +1,446 @@
+namespace LGPE;
+
+file_extension "bin";
+
+struct HashStruct {
+    Hash:uint64;
+    Unk:int32;
+}
+
+table Entity {
+    PosX:float;
+    PosY:float;
+    PosZ:float;
+    RotX:float;
+    RotY:float;
+    RotZ:float;
+    ScaleX:float;
+    ScaleY:float;
+    ScaleZ:float;
+    NameHash:uint64;
+    UnkHash2:uint64;
+    UnkHash3:HashStruct;
+}
+
+table uhhhTable {
+    Object:Entity;
+    UnkHash1:uint64;
+    UnkHash2:uint64;
+    UnkHash3:uint64;
+    unk4:uint32;
+    Object2:Entity;
+    unk:float;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:float;
+    unk9:HashStruct;
+}
+
+table ObsticleTable {
+    Object:Entity;
+    ModelFile:string;
+    AnimCfgFile:string;
+    unk4:float;
+    unk5:float;
+    unk6:float;
+    Object2:Entity;
+    unk8:float;
+    unk9:uint32;
+    unk10:uint32;
+    unk11:uint32;
+    unk12:uint32;
+    unk13:uint32;
+    unk14:uint32;
+}
+
+table GameObjTable {
+    Object:Entity;
+    unk2:uint32;
+    ObjectModel:string;
+    unk3:uint64;
+    unk4:uint64;
+}
+
+table ColTable{
+    Object:Entity;
+    ZoneHash:uint64;
+    UnkHash:uint64;
+    ColFile:string;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
+    unk6:uint64;
+    unk7:uint64;
+    unk8:uint32;
+    unk9:byte;
+    unk10:uint32;
+    unk11:uint32;
+    unk12:HashStruct;
+    unk13:uint32;
+}
+
+table NPC {
+    uhh:uhhhTable;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
+    unkHash:HashStruct;
+    unk7:byte;
+}
+
+table WarpEntryTable {
+    WarpObject:Entity;
+    WarpNameHash:HashStruct;
+    TargetPosX:float;
+    TargetPosY:float;
+    TargetPosZ:float;
+    PlayerRot:float;
+    UnkType:uint32;
+    WarpTriggerBounds:Entity;
+    unk7:uint32;
+    TargetName:string;
+    WarpModel:string;
+    AnimCfgFile:string;
+    flag2:uint32;
+    AnimType:uint32;
+}
+
+table SubEntry7Sub {
+    Object:Entity;
+    unk1:uint32;
+    Object2:Entity;
+    unk3:uint32;
+    Object3:Entity;
+    unk5:float;
+    unk6:float;
+    unk7:uint32;
+    unk8:float;
+    unk9:float;
+    unk10:float;
+    Object4:Entity;
+    unk12:float;
+    unk13:float;
+    unk14:float;
+    unk15:float;
+    unk16:float;
+}
+
+table ParticleEntry {
+    Transform:Entity;
+    ParticleFile:string;
+    unk:uint32;
+}
+
+table SubEntry12Sub {
+    Object:Entity;
+    unk:uint32;
+    Object2:Entity;
+    unk2:float;
+    unk3:uint32;
+    unk4:uint32;
+    unkHash1:uint64;
+    unkHash2:uint64;
+    unkHash3:uint64;
+    unkHash4:uint64;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:float;
+    unk9:float;
+}
+
+table ItemEntryTable {
+    Object:Entity;
+    unkHash1:uint64;
+    unkHash2:uint64;
+    unk3:float;
+    unk4:float;
+    unkHash3:uint64;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:uint32;
+    unk9:uint32;
+    unk10:uint32;
+}
+
+table SubEntry15Sub {
+    Object:Entity;
+    unk:uint32;
+    Object2:Entity;
+    unk2:float;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:uint32;
+    unk9:uint32;
+}
+
+table DialogEntryTable {
+    Object:Entity;
+    unk:uint32;
+    Object2:Entity;
+    unk2:uint32;
+    unk3:float;
+    unk4:float;
+    unk5:float;
+    unk6:uint32;
+    unk7:byte;
+}
+
+table SubEntry18Sub {
+    Object:Entity;
+    unk1:uint32;
+    Object2:Entity;
+    unk3:float;
+    unk4:byte;
+    unk5:uint32;
+    unk6:float;
+    unk7:float;
+    unk8:float;
+    unk9:uint32;
+}
+
+table SubSubEntry23 {
+    Object:Entity;
+}
+
+table SubSubEntry24 {
+    Object:Entity;
+}
+
+table SubSubEntry27 {
+    Object:Entity;
+    unk:uint32;
+    Object2:Entity;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:float;
+    unk4:float;
+    unk5:uint32;
+    unk6:float;
+    unk7:float;
+    unk8:float;
+    unk9:uint32;
+}
+
+table SubEntry20Sub {
+    Object:Entity;
+    unk:uint32;
+    Object2:Entity;
+    unk1:float;
+    unk2:float;
+    unk3:float;
+}
+
+table Obsticle {
+    ObsticleEntry:ObsticleTable;
+}
+
+table SubEntry4 {
+    subEnt4:uint32; //unused?
+}
+
+table WarpTable {
+    WarpEntry:WarpEntryTable;
+}
+
+table DetailObjectTable {
+    GameObject:GameObjTable;
+    flag1:byte;
+    flag2:byte;
+    flag3:uint32;
+    flag4:uint32;
+}
+
+table SubEntry7 {
+    subEnt7:SubEntry7Sub;
+    unk:uint32;
+    unk2:float;
+    unk3:float;
+}
+
+table FlightEntryTable {
+    Object:Entity;
+    unkHash:uint64;
+}
+
+table SubSubEntry25 {
+    Object:Entity;
+    unk1:uint32;
+    Object2:Entity;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:uint32;
+    unk9:uint32;
+}
+
+table SubEntry8 {
+    subEnt8:uint32; //unused?
+}
+
+table SubEntry9 {
+    subEnt9:uint32; //unused?
+}
+
+table ParticleTable {
+    Particle:ParticleEntry;
+}
+
+table SubEntry11 {
+    subEnt11:uint32; //unused?
+}
+
+table SubEntry12 {
+    subEnt12:SubEntry12Sub;
+}
+
+table SubEntry13 {
+    subEnt13:uint32; //unused?
+}
+
+table Item {
+    ItemEntry:ItemEntryTable;
+}
+
+table SubEntry15 {
+    subEnt15:SubEntry15Sub;
+}
+
+table SubEntry16 {
+    unk1:NPC;
+    unk2:uint32;
+    UnkHash:HashStruct;
+    unk4:uint32;
+    unk5:uint32;
+}
+
+table DialogScript {
+    DialogEntry:DialogEntryTable;
+}
+
+table SubEntry18 {
+    subEnt18:SubEntry18Sub;
+    unk:uint64;
+}
+
+table SubEntry19 {
+    subEnt19:uint32; //unused?
+}
+
+table SubEntry20 {
+    subEnt20:SubEntry20Sub;
+}
+
+table SubEntry21 {
+    subEnt21:uint32; //unused?
+}
+
+table FlyLocation {
+    FlightEntry:FlightEntryTable;
+}
+
+table SubEntry23 {
+    subEnt23:SubSubEntry23;
+}
+
+table SubEntry24 {
+    subEnt24:SubSubEntry24;
+}
+
+table SubEntry25 {
+    subEnt25:SubSubEntry25;
+}
+
+table SubEntry26 {
+    subEnt26:uint32; //unused?
+}
+
+table SubEntry27 {
+    subEnt27:SubSubEntry27;
+}
+
+table Unused1Table {
+    
+}
+
+table Unused2Table {
+    
+}
+
+table MapEntry {
+    MapCollision:ColTable;
+    NPCs:[NPC];
+    Obsticles:[Obsticle];
+    Unused0:[SubEntry4];
+    Warps:[WarpTable];
+    DetailObjects:[DetailObjectTable];
+    ent7:[SubEntry7];
+    ent8:[SubEntry8];
+    ent9:[SubEntry9];
+    Particles:[ParticleTable];
+    ent11:[SubEntry11];
+    ent12:[SubEntry12];
+    ent13:[SubEntry13];
+    Items:[Item];
+    EventScripts:[SubEntry15];
+    ent16:[SubEntry16];
+    Unused1:[Unused1Table];
+    DialogScripts:[DialogScript];
+    ent18:[SubEntry18];
+    Unused2:[Unused2Table];
+    ent19:[SubEntry19];
+    ent20:[SubEntry20];
+    ent21:[SubEntry21];
+    FlyLocations:[FlyLocation];
+    ent23:[SubEntry23];
+    ent24:[SubEntry24];
+    ent25:[SubEntry25];
+    ent26:[SubEntry26];
+    ent27:[SubEntry27];
+}
+
+table Placement {
+    MapEntries:[MapEntry];
+    AreaHash:uint64;
+    DirLights:[string];
+    AmbLights:[string];
+    ShadowLights:[string];
+    Object:Entity;
+    flag1:byte;
+    unk1:float;
+    unk2:float;
+    unk3:float;
+    FogRed:float;
+    FogGreen:float;
+    FogBlue:float;
+    unk7:float;
+    unk8:float;
+    unk9:float;
+    unk10:float;
+    unk11:float;
+    unk12:float;
+    unk13:float;
+    unk14:float;
+    unk15:float;
+    unk16:float;
+    unk17:float;
+    unk18:float;
+    flag2:byte;
+    unk19:float;
+    unk20:float;
+    unk21:float;
+    unk22:float;
+    unk23:uint32;
+}
+
+root_type Placement;

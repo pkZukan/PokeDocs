@@ -1,0 +1,50 @@
+namespace GFLib.Model;
+
+struct Box {
+  minX: float;
+  minY: float;
+  minZ: float;
+  maxX: float;
+  maxY: float;
+  maxZ: float;
+}
+
+table ColString {
+  name: string;
+}
+
+table ColMesh {
+	col_id:uint32;
+	box:Box;
+}
+
+table Polygon {
+	materialID:uint32;
+	tris:[uint16];
+}
+
+table VertexAttribute {
+	type:uint32;
+	format:uint32;
+	count:uint32;
+}
+
+table ColShape {
+	polygons:[Polygon];
+	attributes:[VertexAttribute];
+	vertex_buffer:[uint8];
+}
+
+table ColOrder {
+  box: Box;
+  order: [uint32];
+}
+
+table GFBCol {
+  names: [ColString];
+  meshes: [ColMesh];
+  shapes: [ColShape];
+  info: ColOrder;
+}
+
+root_type GFBCol;

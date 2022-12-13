@@ -1,0 +1,93 @@
+include "structs.fbs";
+
+include "VectorTrack.fbs";
+include "ValueTrack.fbs";
+include "DataTrack.fbs";
+
+namespace GFLib.Anim;
+
+file_extension "gfbanm";
+
+table Info {
+  doesLoop:uint32;
+  keyFrames:uint32;
+  frameRate:uint32;
+}
+
+table BoneTrack {
+  name:string;
+  scale:VectorTrack;
+  rotate:RotationTrack;
+  translate:VectorTrack;
+}
+
+table BoneInit {
+  isInit:uint32;
+  transform:Transform; 
+}
+
+table BoneAnimation {
+  tracks:[BoneTrack];
+  initData:BoneInit;
+}
+
+table ColorEntry {
+  name:string;
+  col:VectorTrack;
+}
+
+table FlagEntry {
+  name:string;
+  flag:BooleanTrack;
+}
+
+table ShaderEntry {
+  name:string;
+  value:FloatTrack;
+}
+
+table MaterialTrack {
+  name:string;
+  flags:[FlagEntry];
+  values:[ShaderEntry];
+  vectors:[ColorEntry];
+}
+
+table MaterialAnimation {
+  tracks: [MaterialTrack];
+}
+
+table SkinTrack {
+  name:string;
+  values:ByteTrack;
+}
+
+table SkinAnimation {
+  tracks: [SkinTrack];
+}
+
+table CommandEntry {
+  name:string;
+  tracks:DataTrack;
+}
+
+table CommandTrack {
+  name:string;
+  frameStart:uint32;
+  frameLen:uint32;
+  vec:[CommandEntry];
+}
+
+table CommandAnimation {
+  tracks: [CommandTrack];
+}
+
+table Animation {
+  info:Info;
+  skeleton:BoneAnimation;
+  material:MaterialAnimation;
+  visibility:SkinAnimation;
+  eventData:CommandAnimation;
+}
+
+root_type Animation;

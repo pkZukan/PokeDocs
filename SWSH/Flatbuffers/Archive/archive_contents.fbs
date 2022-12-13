@@ -1,0 +1,11 @@
+namespace GFLib.Catalog;
+
+table Archive {
+  archash:uint64;
+  subhashes:[uint64];
+}
+
+table ArchiveContents {
+  archives:[Archive];
+}
+root_type ArchiveContents;

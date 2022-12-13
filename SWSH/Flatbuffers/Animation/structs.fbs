@@ -1,0 +1,36 @@
+namespace GFLib.Anim;
+
+struct sVec2 {
+  u: int16;
+  v: int16;
+}
+
+struct Vec2 {
+  u: float;
+  v: float;
+}
+
+struct Vec3 {
+  x: float;
+  y: float;
+  z: float;
+}
+
+struct sVec3 {
+  x:uint16;
+  y:uint16;
+  z:uint16;
+}
+
+struct Vec4 {
+  x:float;
+  y:float;
+  z:float;
+  w:float;
+}
+
+struct Transform {
+  scale:Vec3;
+  rotate:Vec4;
+  translate:Vec3;
+}

@@ -1,0 +1,72 @@
+include "species.fbs";
+
+namespace GFLib.Pokemon;
+
+file_extension "gfbpokecfg";
+
+table meshProperty {
+  isVisible:bool = 0;
+  meshName:string;
+}
+
+table meshEntries {
+  entry:[meshProperty];
+}
+
+table SpeciesSettings {
+  SpeciesParamType:Size = 0;
+  SpeciesSetting:[meshEntries];
+}
+
+table materialEntry {
+  materialName:string;
+}
+
+table gfbpokecfg {
+  majorVer:uint32 = 0; //Might be a bit mask, either 3 or 5
+  minorVer:uint32; //Never defined
+
+  speciesID:SpeciesID = 0;
+  form_ID:uint16 = 0; //Used for female forms, alternate forms, GMax and Alolan forms
+
+  name:string; //Always empty vec
+  jp_name:string; //Always empty vec
+
+  speciesType:SpeciesType = 0;
+  size_index:Size = SIZE_S;
+
+  //Height Info
+  height:float = 1.0;
+  adjust_height:float = 1.0;
+  field_adjust:float = 1.0;
+
+  //Bounding Box
+  min_b_x:float = 1.0;
+  min_b_y:float = 1.0;
+  min_b_z:float = 1.0;
+  max_b_x:float = 1.0;
+  max_b_y:float = 1.0;
+  max_b_z:float = 1.0;
+
+  //Frame positioning (To be properly documented soon)
+  inframe_height:float = 1.0;
+  inframe_vertical_rot_y_origin:float = 1.0;
+  inframe_bottom_y_offset:float = 1.0;
+  inframe_center_y_offset:float = 1.0;
+  inframe_left_rotation:float = 1.0;
+  inframe_right_rotation:float = 1.0;
+
+  region_ID:uint16 = 0; //Reserved for Galarian forms/crossgens
+
+  //it's 0.00 for some mon, 1.00 for most
+  wait_motion_b_rate:float;
+  //1.00, 0.00 And 35345604608.0 for Eternatus
+  wait_motion_c_rate:float;
+
+  undef_26:uint16; //Never defined
+  undef_27:uint16; //Never defined
+
+  materialEntries:[materialEntry];
+  SpeciesSetting:SpeciesSettings;
+}
+root_type gfbpokecfg;

@@ -1,0 +1,77 @@
+//For some reason, additive_plane and primitive_plane have a different schema
+//To handle this in code, read the first element of the table and check the version, then re-read again
+include "Material.fbs";
+include "Mesh.fbs";
+include "Rig.fbs";
+include "structs.fbs";
+
+namespace GFLib.Model;
+
+file_extension "gfbmdl";
+
+table Bone_Plane {
+  name:string;
+  parent: int32; //0, 1, 2 or -1
+
+  type:BoneType = Transform;
+  effect: BillboardType = None; //0, 1, 2, mostly seen in effects (ee, em and ew)
+
+  segment_scale_compensate: bool = 0; // What
+
+  VecPos: Vec3;
+  VecRot: Vec3;
+  VecScale: Vec3;
+
+  //Used for envelope bones?
+  VecScalePivot: Vec3;
+  VecRotatePivot: Vec3;
+
+  //Have seen these mostly in area regions and effect bones
+  //Only present when value is 0
+  is_skin: uint8 = 1; 
+}
+
+table Material_Plane {
+  name: string;
+  shader: string;
+
+  renderpass: Pass = 0; 
+
+  //Byte Params
+  b3: uint8;
+  b4: uint8;
+
+  //Int Params
+  i5: uint32 = 0;
+  i6: uint32 = 0;
+  i7: uint32 = 0;
+  i8: uint32 = 0;
+  i9: uint32 = 0;
+  iA: uint32 = 0;
+
+  //Nodes
+  iB: [Texture];
+  iC: [Flag];
+  iD: [Value];
+  iE: [Color];
+
+  i15: uint32;
+}
+
+table GFBMDL_Plane {
+  textureNames:[string];
+  meshNames:[string];
+  emptyVec:[uint32];
+  materialNames:[string];
+  materials:[Material_Plane];
+  //fun stuff, all groups are unused but still included
+  meshes:[Mesh]; 
+  shapes:[Shape];
+  skel:[Bone_Plane];
+  //These are empty for these types of meshes, so why not
+  collisions:[uint32];
+  renderLayers:[uint32];
+  renderBox:Box;
+}
+
+root_type GFBMDL_Plane;

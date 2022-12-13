@@ -1,0 +1,22 @@
+namespace Hayabusa.Resource;
+
+file_extension "bin";
+
+table ModelEntry
+{
+    species_hash: uint64;
+    npc_hash: uint64;
+    species: uint32;
+    form: uint32;
+    gender: string;
+    unk5: uint32;
+    unk6: uint32;
+    unk7: uint32;
+    unk8: uint32;
+}
+
+table ModelSet {
+    sets: [ModelEntry];
+}
+
+root_type ModelSet;

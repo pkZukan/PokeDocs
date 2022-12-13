@@ -1,0 +1,138 @@
+include "gfbanmcfgStateMachine.fbs";
+
+namespace GFLib.Anim;
+
+file_extension "gfbanmcfg";
+
+table StringEntry {
+  string:string;
+}
+
+table MaskSet {
+  enabled:uint8;
+  maskUnit:[StringEntry];
+}
+
+table MaterialMask {
+  name:string;
+  bool_params:MaskSet;
+  float_params:MaskSet;
+  vec3_params:MaskSet;
+}
+
+table MaterialMaskSet {
+  enabled:uint8;
+  masks:[MaterialMask];
+}
+
+table Mask {
+  joint_mask_set: MaskSet;
+  material_mask_set: MaterialMaskSet;
+  mesh_mask_set: MaskSet;
+}
+
+table Layer {
+  index:uint32;
+  name: string;
+  children:Mask;
+}
+
+table LayerConfig {
+  layer: [Layer];
+  blend_Mask: Mask;
+}
+
+struct Range {
+  r0:float;
+  r1:float;
+}
+
+enum RotationType: uint32 {
+    x,
+    yz,
+    xz,
+    xy,
+    zy,
+    y,
+    z,
+    x_m90,
+    z_180,
+    y_90,
+}
+
+table LookAtNode {
+  name:string;
+  rot_type:RotationType;
+  limit1:Range;
+  limit2:Range;
+  speed:float;
+}
+
+table LookAtEntries {
+  entries:[LookAtNode];
+}
+
+table ResourceNode {
+  name:string;
+  fileName:string;
+}
+
+table ResourceConfig {
+  entries: [ResourceNode];
+}
+
+table IntParameter {
+  name:string;
+  min:uint32;
+  max:uint32;
+}
+
+table FloatParameter {
+  name:string;
+  min:float;
+  max:float;
+}
+
+table ParameterConfig {
+  IntParameters:[IntParameter];
+  FloatParameters:[FloatParameter];
+  BoolParameters:[StringEntry];
+  TriggerParameters:[StringEntry];
+}
+
+table SpringNode {
+  name:string;
+  damp:float;
+  stiff:float;
+  mass:float;
+  gravity:float;
+  rotate_only_y:bool;
+}
+
+table SpringConfig {
+  nodes: [SpringNode];
+}
+
+table IKNode {
+  chain:string;
+  joint:string;
+  effector:string;
+  tip:string;
+  reverse_enabled:bool;
+}
+
+table IKConfig {
+  nodes: [IKNode];
+}
+
+table gfbanmcfg {
+  layerConfig:LayerConfig;
+  lookAtConfig:LookAtEntries;
+  springConfig:SpringConfig;
+  iKConfig:IKConfig;
+  stateConfig:StateEntries;
+  parameterConfig:ParameterConfig;
+  resourceConfig:ResourceConfig;
+}
+
+root_type gfbanmcfg;

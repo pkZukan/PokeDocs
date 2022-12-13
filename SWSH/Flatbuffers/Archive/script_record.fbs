@@ -1,0 +1,17 @@
+namespace GFLib.Catalog;
+
+struct what {
+  hash:uint64;
+  unk1:uint32;
+}
+
+table record {
+  unk_3:what;
+  unk_1:string;
+  unk_2:string;
+}
+
+table ScriptRecords {
+  unk_0:[record];
+}
+root_type archiveContents;

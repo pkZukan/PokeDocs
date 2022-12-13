@@ -1,0 +1,40 @@
+include "structs.fbs";
+include "Mesh.fbs";
+include "Material.fbs";
+include "Rig.fbs";
+
+namespace GFLib.Model;
+
+file_extension "gfbmdl";
+
+table LayerData {
+  layerIndex: uint32;
+  mixFactor: float;
+}
+
+table RenderLayers {
+  layers:[LayerData];
+  mixFactor:float;
+}
+
+struct Info {
+  v1: uint16;
+  v2: uint16;
+}
+
+table GFBMDL {
+  version:Info;
+  boundingBox:Box;
+  textureFiles:[string];
+  vertexShaders:[string];
+  geometryShaders:[string];
+  fragmentShaders:[string];
+  materials:[Material];
+  mesh:[Mesh];//Meshes
+  shapes:[Shape];//Shapes
+  skeleton:[Bone];//TransformNodes
+  transparencygroup:[TransparencyGroupNode];//TransparencyGroupNodes
+  renderLayers:[RenderLayers];//
+}
+
+root_type GFBMDL;

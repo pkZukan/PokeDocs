@@ -1,0 +1,62 @@
+include "structs.fbs";
+
+namespace GFLib.Model;
+
+enum Attribute : uint8 {
+  //Using GLTF friendly attribute names
+  POSITION = 0,
+  NORMAL,
+  BINORMAL,
+  TEXCOORD_0,
+  TEXCOORD_1,
+  TEXCOORD_2,
+  TEXCOORD_3,
+  COLOR_0,
+  COLOR_1,
+  COLOR_2,
+  COLOR_3,
+  GROUP_IDX = 11,
+  GROUP_WEIGHT,
+}
+
+enum DataType : uint8 {
+  _Float = 0,
+  _HalfFloat = 1,
+  _Byte = 2,
+  _UByte = 3,
+  _Short = 4,
+  _UShort = 5,
+  _Int = 6,
+  _UInt = 7,
+  _FixedPoint = 8,
+}
+
+table VertexAttribute {
+  type : Attribute = 0;
+  format : DataType = 0;
+  count : uint32;
+}
+
+table Polygon {
+  materialId:uint32;
+  tris:[uint16];
+}
+
+table Shape {
+  polygons:[Polygon];
+  attributes:[VertexAttribute];
+  vertices:[uint8];
+}
+
+enum Sort_Priority: uint32 {
+  s0 = 0,
+  s1 = 1,
+  s2 = 2,
+}
+
+table Mesh {
+  boneID:uint32;
+  shapeID:uint32 = 0;
+  box:Box;
+  sort_priority: Sort_Priority = 0; //Values have been 0 or 0x2 so far
+}

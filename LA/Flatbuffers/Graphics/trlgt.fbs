@@ -1,0 +1,43 @@
+struct Vec4 {
+    x: float;
+    y: float;
+    z: float;
+    w: float;
+}
+
+table BoundMatrix {
+    x: Vec4;
+    y: Vec4;
+    z: Vec4;
+}
+
+table Vec4Parameter {
+    param_name: string;
+    value: Vec4;
+}
+
+table FloatParameter {
+    param_name: string;
+    param_val: float; 
+}
+
+table StringParameter {
+    map_name: string;
+    map_file: string;
+}
+
+table Light {
+    light_type: string;
+    light_name: string;
+    light_matrix: BoundMatrix;
+    float_params: [FloatParameter];
+    vec4_params: [Vec4Parameter];
+    string_params: [StringParameter];
+}
+
+table TRLGT{
+    res_0: uint32 = 0x0;
+    lights: [Light];
+}
+
+root_type TRLGT;

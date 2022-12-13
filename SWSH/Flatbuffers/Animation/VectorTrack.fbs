@@ -1,0 +1,44 @@
+include "structs.fbs";
+
+namespace GFLib.Anim;
+
+union VectorTrack { FixedVectorTrack, DynamicVectorTrack,  Framed16VectorTrack, Framed8VectorTrack }
+
+table FixedVectorTrack {
+  co: Vec3;
+}
+
+table DynamicVectorTrack {
+  co: [Vec3];
+}
+
+table Framed16VectorTrack {
+  frames:[uint16];
+  co: [Vec3];
+}
+
+table Framed8VectorTrack {
+  frames:[uint8];
+  co:[Vec3];
+}
+
+union RotationTrack { FixedRotationTrack, DynamicRotationTrack, Framed16RotationTrack, Framed8RotationTrack }
+
+table FixedRotationTrack {
+  co:sVec3;
+}
+
+table DynamicRotationTrack {
+  co:[sVec3];
+}
+
+table Framed16RotationTrack {
+  frames:[uint16];
+  co:[sVec3];
+}
+
+table Framed8RotationTrack {
+  frames:[uint8];
+  co:[sVec3];
+}
+

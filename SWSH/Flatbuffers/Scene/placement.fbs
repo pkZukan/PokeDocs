@@ -1,0 +1,473 @@
+namespace SwSh;
+
+file_extension "bin";
+
+struct HashStruct{
+    Hash:uint64;
+    unk1:uint32;
+}
+
+table UnkTable1 {
+    unk:uint32;
+}
+
+table UnkTable2 {
+    unk0:uint8;
+    unk1:uint32;
+}
+
+union Ent11Subs { Ent11Sub, Ent11Sub2, Ent11Sub3 }
+
+table Entity {
+    PosX:float;
+    PosY:float;
+    PosZ:float;
+    RotX:float;
+    RotY:float;
+    RotZ:float;
+    ScaleX:float;
+    ScaleY:float;
+    ScaleZ:float;
+    NameHash:uint64;
+    UnkHash2:uint64;
+    UnkHash3:uint64;
+}
+
+table ColTable{
+    Transform:Entity;
+    ZoneHash:uint64;
+    UnkHash:uint64;
+    unk0:uint32;
+    unk1:uint32;
+    Bgm:string;
+    unk3:uint32;
+    unk4:uint64;
+    unk5:uint64;
+    unk6:uint64;
+    unk7:byte;
+    unk8:byte;
+    unk9:uint32;
+    unk10:uint32;
+    unk11:uint32;
+    unk12:uint32;
+}
+
+table WarpEntryTable {
+    WarpObject:Entity;
+    WarpNameHash:uint64;
+    TargetName:string;
+    unk0:uint32;
+    unk1:uint32;
+    unk2:uint32;
+    unk4:float;
+    unk5:uint32;
+    unk6:uint64;
+    WarpTriggerBounds:Entity;
+    unk7:uint32;
+    unk8:uint32;
+}
+
+table UnkTable {
+    UnkTrans1:Entity;
+    unkHash1:uint64;
+    unkHash2:uint64;
+    unkHash3:uint64;
+    UnkTrans2:Entity;
+    unk3:byte;
+    unkHash4:uint64;
+    unk5:uint32;
+}
+
+table UnkTable2 {
+    unk0:uint32;
+    unk1:uint32;
+}
+
+table UnkTable3 {
+    unk0:byte;
+    unk1:byte;
+    unk2:byte;
+    unk3:uint32;
+    unk4:uint64;
+    unk5:byte;
+    unk6:uint32;
+    unk7:uint64;
+    unk8:uint32;
+}
+
+table UnkTable4 {
+    unk0:byte;
+    unk1:uint32;
+}
+
+table UnkTable5 {
+    unk0:uint32;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:uint32;
+    unk4:uint32;
+}
+
+table WarpTable {
+    Warps:WarpEntryTable;
+}
+
+table ParticleTable {
+    Transform:Entity;
+    ParticleFile:string;
+}
+
+table Ent7Sub {
+    Transform:Entity;
+    unkHash1:uint64;
+    unk0:string;
+    unk1:float;
+    unk2:float;
+    unkHash2:uint64;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:byte;
+    unk6:UnkTable4;
+}
+
+table Ent2Sub {
+    Transform:Entity;
+    ModelFile:string;
+    unk0:uint32;
+    unk1:float;
+    unk2:float;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:uint32;
+    unk9:uint32;
+    unk10:uint32;
+    unk11:uint32;
+    unk12:UnkTable2;
+}
+
+table Ent3Sub {
+    Transform:Entity;
+    UnkHash1:uint64;
+    UnkHash2:uint64;
+    UnkHash3:uint64;
+    UnkHash4:uint64;
+    unk0:uint32;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
+    unk6:uint32;
+    UnkHash5:uint64;
+}
+
+table Ent8Sub {
+    Transform:Entity;
+    unk0:HashStruct;
+    unk1:uint32;
+    Transform:Entity;
+    unk2:uint32;
+}
+
+table Ent10Sub {
+    Transform:Entity;
+    unk0:float;
+    unk1:float;
+    unk2:float;
+    unk3:uint32;
+    Hash0:uint64;
+    unk4:UnkTable1;
+    unk5:UnkTable2;
+}
+
+table Ent11Sub {
+    Transform:Entity;
+    unk0:uint32;
+    unk1:uint32;
+    Name:string;
+    unk2:float;
+    unk3:int32;
+}
+
+table Ent11Sub2 {
+    Transform:Entity;
+    unk0:uint32;
+    Name1:string;
+    Name2:string;
+    unk2:float;
+    unk3:float;
+    unk4:uint32;
+}
+
+table Ent11Sub3 {
+    Transform:Entity;
+    unk0:uint32;
+    Name1:string;
+    Name2:string;
+    unk3:float;
+    unk4:float;
+}
+
+table Ent12Sub {
+    Transform:Entity;
+    unk0:uint64;
+}
+
+table Ent13Sub {
+    Transform:Entity;
+}
+
+table Ent14Sub {
+    Transform:Entity;
+    unk0:uint64;
+    unk1:uint64;
+    unk2:uint32;
+    unk3:uint64;
+    unk4:uint32;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:byte;
+}
+
+table Ent17Sub {
+    unkTable:UnkTable;
+}
+
+table Ent19Sub {
+    Transform:Entity;
+    unk0:float;
+    unk1:float;
+    unk2:float;
+    unk3:float;
+    unk4:float;
+    unk5:float;
+    unk6:float;
+    unk7:float;
+}
+
+table Ent25Sub {
+    Transform:Entity;
+    unk:UnkTable5;
+    unk0:float;
+    unk1:float;
+    unk2:float;
+    unk3:float;
+    unk4:uint64;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:float;
+    unk9:uint32;
+    unk10:uint32;
+}
+
+table Ent26Sub {
+    unk0:uint32;
+    unk1:byte;
+    unk2:uint32;
+    unk3:byte;
+}
+
+table Ent2 {
+    ent2Entry:Ent2Sub;
+}
+
+table Ent3 {
+    ent3Entry:Ent3Sub;
+    unk0:uint32;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:uint32;
+    unk4:uint32;
+    unk5:uint32;
+    unkHash1:uint64;
+    unkHash2:uint64;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:float;
+    unk9:UnkTable3;
+    unk10:uint32;
+    unk11:uint32;
+    unk12:byte;
+}
+
+table Particle {
+    ParticleObj:ParticleTable;
+}
+
+table Ent7 {
+    ent7Entry:Ent7Sub;
+}
+
+table Ent8 {
+    ent8Entry:Ent8Sub;
+}
+
+table Ent11 {
+    ent11Entry:Ent11Subs;
+}
+
+table Ent10 {
+    ent10Entry:Ent10Sub;
+}
+
+table Ent12 {
+    ent12Entry:Ent12Sub;
+}
+
+table Ent13 {
+    ent13Entry:Ent13Sub;
+}
+
+table Ent14 {
+    ent14Entry:Ent14Sub;
+}
+
+table Ent15 {
+    ent15Entry:uint32;
+}
+
+table Ent16 {
+    Transform:Entity;
+    Hash:uint64;
+    unk1:uint32;
+    unk2:uint32;
+    unk3:byte;
+    unk4:uint32;
+}
+
+table Ent17 {
+    ent17Entry:Ent17Sub;
+    unk0:uint32;
+    unkHash1:uint64;
+    unkHash2:uint64;
+    unk3:uint32;
+    unkHash3:uint64;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:uint32;
+    unk9:float;
+    unk10:uint32;
+    unk11:uint32;
+    unk12:uint32;
+    unk13:uint32;
+    unk14:uint32;
+}
+
+table Ent18 {
+    ent18Entry:uint32;
+}
+
+table Ent19 {
+    ent19Entry:Ent19Sub;
+}
+
+table Ent20 {
+    ent20Entry:uint32;
+}
+
+table Ent21 {
+    ent21Entry:uint32;
+}
+
+table Ent22 {
+    ent22Entry:uint32;
+}
+
+table Ent23 {
+    ent23Entry:uint32;
+}
+
+table Ent24 {
+    ent24Entry:uint32;
+}
+
+table Ent25 {
+    ent25Entry:Ent25Sub;
+}
+
+table Ent26 {
+    ent26Entry:Ent26Sub;
+}
+
+table Ent27 {
+    ent27Entry:uint32;
+}
+
+table Ent28 {
+    ent28Entry:uint32;
+}
+
+table MapEntry {
+    MapCollision:ColTable;
+    ent2:[Ent2];
+    ent3:[Ent3];
+    Warps:[WarpTable];
+    unk5:uint32;
+    Particles:[Particle];
+    ent7:[Ent7];
+    ent8:[Ent8];
+    ent9:uint32;
+    ent10:[Ent10];
+    ent11:[Ent11];
+    ent12:[Ent12];
+    ent13:[Ent13];
+    ent14:[Ent14];
+    ent15:[Ent15];
+    ent16:[Ent16];
+    ent17:[Ent17];
+    ent18:[Ent18];
+    ent19:[Ent19];
+    ent20:[Ent20];
+    ent21:[Ent21];
+    ent22:[Ent22];
+    ent23:[Ent23];
+    ent24:[Ent24];
+    ent25:[Ent25];
+    ent26:[Ent26];
+    ent27:[Ent27];
+    ent28:[Ent28];
+}
+
+table Placement {
+    MapEntries:[MapEntry];
+    unk0:uint32;
+    Name:string;
+    unk1:uint32;
+    Transform:Entity;
+    FogRed:float;
+    FogGreen:float;
+    FogBlue:float;
+    unk5:uint32;
+    unk6:uint32;
+    unk7:uint32;
+    unk8:uint32;
+    unk9:float;
+    unk10:float;
+    unk11:float;
+    unk12:float;
+    unk13:float;
+    unk14:float;
+    unk15:uint32;
+    unk16:uint32;
+    unk17:float;
+    unk18:float;
+    unk19:float;
+    unk20:float;
+    unk21:uint32;
+    unk22:uint32;
+    unk23:float;
+    unk24:byte;
+    unk25:byte;
+    unk26:uint32;
+    unk27:byte;
+    unk28:float;
+    unk29:float;
+    unk30:byte;
+}
+
+root_type Placement;

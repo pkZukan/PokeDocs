@@ -1,0 +1,103 @@
+namespace Hayabusa.Model;
+
+file_extension "trmtr";
+
+struct RGBA {
+        r: float;
+        g: float;
+        b: float;
+        a: float;
+}
+
+enum UVWrapMode: uint32 {
+        //Time to test these as bit fields?
+        WRAP = 0, //0000
+        CLAMP = 1, //0001
+        MIRROR = 6, //0110
+        MIRROR_ONCE = 7, //0111
+}
+
+table SamplerState {
+        SamplerState_0: uint32 = 0x0; //Never used
+        SamplerState_1: uint32 = 0x0; //Never used
+        SamplerState_2: uint32 = 0x0; //Never used
+        SamplerState_3: uint32 = 0x0; //Never used
+        SamplerState_4: uint32 = 0x0; //Never used
+        SamplerState_5: uint32 = 0x0; //Never used
+        SamplerState_6: uint32 = 0x0; //Never used
+        SamplerState_7: uint32 = 0x0; //Never used
+        SamplerState_8: uint32 = 0x0; //Never used
+        repeat_u: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
+        repeat_v: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
+        repeat_w: UVWrapMode = WRAP; //Never used
+        border_color: RGBA;
+}
+
+table Float4Parameter {
+        color_name: string;
+        color_value: RGBA; 
+}
+
+table FloatParameter {
+        float_name: string;
+        float_value: float;
+}
+
+table IntParameter {
+        int_name: string;
+        int_value: int32 = -1;
+}
+
+table StringParameter {
+        string_name: string;
+        string_value: string;
+}
+
+table Shader {
+        shader_name: string;
+        shader_values: [StringParameter];
+}
+
+table Texture  {
+        texture_name: string;
+        texture_file: string;
+        texture_slot: uint32 = 0;
+}
+
+table Byte_Extra {
+        //Only pm0448 has it as 0x0 in Transparent Shader
+        value: int8 = -1; 
+}
+
+table Int_Extra {
+        res_0: uint32;
+        //0 when Transparent
+        //1 when NonDirectional
+        value: int32 = -1;
+}
+
+table Material{
+        name: string; 
+        shaders: [Shader]; 
+        textures: [Texture];
+        samplers: [SamplerState]; 
+        float_parameter: [FloatParameter];
+        unk_5: string; //Always empty
+        float4_light_parameter: [Float4Parameter];
+        float4_parameter: [Float4Parameter];
+        unk_8: string; //Always empty
+        int_parameter: [IntParameter];
+        unk_10: string; //Always empty
+        unk_11: string; //Always empty
+        unk_12: string; //Always empty
+        byte_extra: Byte_Extra;
+        int_extra: Int_Extra;
+        alpha_type: string;
+}
+
+table TRMTR{
+        res_0: uint32;
+        materials: [Material];
+}
+
+root_type TRMTR;

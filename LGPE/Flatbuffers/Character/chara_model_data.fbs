@@ -1,0 +1,68 @@
+namespace LGPE;
+
+file_extension "bin";
+
+struct HashStruct {
+    Hash:uint64;
+    unk:uint32;
+}
+
+table FileStringsTable {
+    ModelFile:string;
+    UnkStr0:string;
+    FieldAnimCfgFile:string;
+    UnkStr1:string;
+    BattleAnimCfg:string;
+    CaptureAnimCfg:string;
+    UnkStr2:string;
+    AppAnimCfg:string;
+    GokigenAnimCfg:string;
+    AnimPath:string;
+    GFPakFile1:string;
+    GFPakFile2:string;
+}
+
+table MonStringTable {
+    str0:string;
+    str1:string;
+    str2:string;
+    str3:string;
+    str4:string;
+    str5:string;
+    str6:string;
+    str7:string;
+    str8:string;
+    str9:string;
+    str10:string;
+}
+
+table unkTable1 {
+
+}
+
+table HashesTable {
+    Hash:HashStruct;
+}
+
+table Ent1Table {
+    unk0:unkTable1;
+    Hashes:[HashesTable];
+}
+
+table Ent2Table {
+    Hash0:uint64;
+    Hash1:uint64;
+    Hash2:uint64;
+    unk:uint32;
+    FileStrings:FileStringsTable;
+    
+}
+
+table CharaModelData {
+    MonString:MonStringTable;
+    Ent1:Ent1Table;
+    Ent2:[Ent2Table];
+    Ent3:uint32;
+}
+
+root_type CharaModelData;

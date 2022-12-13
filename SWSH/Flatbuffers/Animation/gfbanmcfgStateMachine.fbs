@@ -1,0 +1,98 @@
+namespace GFLib.Anim;
+
+enum StateType : uint32 {
+  Normal = 0,
+  Entry,
+  Exit,
+  Any,
+  Top,
+}
+
+union ValueType {ConditionValue_Int, ConditionValue_Float, ConditionValue_Bool, ConditionValue_Trigger}
+
+table ConditionValue_Int {
+  value:uint32;
+}
+
+table ConditionValue_Float {
+  value:float;
+}
+
+table ConditionValue_Bool {
+  value:int8;
+}
+
+table ConditionValue_Trigger {
+  value:uint8;
+}
+
+enum ConditionFunc : uint32 {
+  Less = 0,
+  Lequal,
+  Greater,
+  Gequal,
+  Equal,
+  NEqual,
+}
+
+table Condition {
+  name:string;
+  func:ConditionFunc;
+  value:ValueType;
+}
+
+table Transition {
+  path:string;
+  has_exit_time:bool;
+  exit_time:float;
+  duration:float;
+  offset:float;
+  can_interrupt:bool;
+  conditions:[Condition];
+  undef_7:uint32;
+  undef_8:uint32;
+  undef_9:uint32;
+  undef_10:uint32;
+  unk_11:string;
+}
+
+table StateNodeUnk {
+  undef_0:bool;
+  unk_1:float;
+}
+
+enum resourceType: uint32 {
+  file = 0,
+  blend1d,
+}
+
+table ResourceLabel {
+  resource_name:string;
+  resource_type:resourceType;
+}
+
+table Source {
+  tag:string;
+  state: ResourceLabel;
+  speed:float;
+}
+
+table State {
+  path:string;
+  statetype:StateType;
+  tag:string;
+  source:Source;
+  transitions:[Transition];
+  substates:[State];
+  // unk_1:StateNodeUnk;
+}
+
+table TopState {
+  state_name:string;
+  root_node:State;
+}
+
+table StateEntries {
+  StateMachines: [TopState];
+}
+

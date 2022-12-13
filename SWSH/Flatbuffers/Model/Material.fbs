@@ -1,0 +1,162 @@
+include "structs.fbs";
+
+namespace GFLib.Model;
+
+table UberShaderSettings {
+  uber_flags: [Flag];
+  uber_value: [Value];
+  uber_color: [Color];
+}
+
+enum FilterMode: uint32 {
+  MinMagMipLinear,
+  MinMagMipPoint,
+  Anisotropic,
+  MinPoint_MagPoint_MipLinear,
+  MinPoint_MagLinear_MipPoint,
+  MinPoint_MagLinear_MipLinear,
+  MinLinear_MagPoint_MipPoint,
+  MinLinear_MagPoint_MipLinear,
+  MinLinear_MagLinear_MipPoint,
+  Comparison_MinPoint_MagPoint_MipPoint,
+  Comparison_MinPoint_MagPoint_MipLinear,
+  Comparison_MinPoint_MagLinear_MipPoint,
+  Comparison_MinPoint_MagLinear_MipLinear,
+  Comparison_MinLinear_MagPoint_MipPoint,
+  Comparison_MinLinear_MagPoint_MipLinear,
+  Comparison_MinLinear_MagLinear_MipPoint,
+  Comparison_MinLinear_MagLinear_MipLinear,
+  Comparison_Anisotropic,
+  Minimum_MinPoint_MagPoint_MipPoint,
+  Minimum_MinPoint_MagPoint_MipLinear,
+  Minimum_MinPoint_MagLinear_MipPoint,
+  Minimum_MinPoint_MagLinear_MipLinear,
+  Minimum_MinLinear_MagPoint_MipPoint,
+  Minimum_MinLinear_MagPoint_MipLinear,
+  Minimum_MinLinear_MagLinear_MipPoint,
+  Minimum_MinLinear_MagLinear_MipLinear,
+  Minimum_Anisotropic,
+  Maximum_MinPoint_MagPoint_MipPoint,
+  Maximum_MinPoint_MagPoint_MipLinear,
+  Maximum_MinPoint_MagLinear_MipPoint,
+  Maximum_MinPoint_MagLinear_MipLinear,
+  Maximum_MinLinear_MagPoint_MipPoint,
+  Maximum_MinLinear_MagPoint_MipLinear,
+  Maximum_MinLinear_MagLinear_MipPoint,
+  Maximum_MinLinear_MagLinear_MipLinear,
+  Maximum_Anisotropic
+}
+
+enum UVWrapMode: uint32 {
+  WRAP = 0,
+  CLAMP = 1,
+  MIRROR = 2,
+  BORDER = 3,
+}
+
+table SamplerState {
+  filtermode: FilterMode;
+  repeat_u: UVWrapMode;
+  repeat_v: UVWrapMode; //Clamp related
+  repeat_2: UVWrapMode; //Clamp related
+  border_color: RGBA;
+  mip_map_bias: float;
+}
+
+//TODO: Use GLSL friendly names, these match up to the shader
+table Texture {
+  sampler_name:string;
+  texture_index:uint32;
+  settings:SamplerState;
+}
+
+table Flag {
+  flag_name:string;
+  flag_enable:bool;
+}
+
+table Value {
+  value_name:string;
+  value:float;
+}
+
+table Color {
+  color_name:string;
+  color:RGB;
+}
+
+enum Pass: uint32 {
+  DEFAULT = 0,
+  PARTICLE = 1, //Used for bubbles and lights
+  ADDGLASS = 2, //add
+  ALPGLASS = 3 //referred to as alp
+}
+
+enum Unk: uint32 {
+  s0 = 0,
+  s1 = 7
+}
+
+enum Blend_Mode:uint32 {
+  NONE = 0,
+  ALPHA,
+  ADD,
+  SUBTRACT,
+  MULTIPLY,
+  PREMULTIPLY,
+  COUNT,
+}
+
+enum Cull_Mode:uint32 {
+  NONE = 0,
+  BACK,
+  FRONT,
+}
+
+
+enum DepthComparison:uint32 {
+  NEVER = 0,
+  LESS,
+  LESSEQUAL,
+  GREATER,
+  NOTEQUAL,
+  GREATEREQUAL,
+  ALWAYS = 7,
+}
+
+table Material {
+  name: string;
+  shader: string;
+
+  sort_priority: Pass = 0; 
+
+  //Byte Params
+  depth_write: uint8 = 0;
+  depth_test: uint8 = 0;
+
+  //Int Params
+  light_set_num: uint32 = 0;
+  blend_mode: Blend_Mode = 0;
+  cull_mode: Cull_Mode = 0;
+  vertex_shader_file_id: uint32 = 0;
+  geom_shader_file_id: uint32 = 0;
+  frag_shader_file_id: uint32 = 0;
+
+  //Nodes
+  textures: [Texture];
+  flags: [Flag];
+  values: [Value];
+  colors: [Color];
+
+  //Four bits
+  recieve_shadow: uint8 = 0;
+  cast_shadow: uint8 = 0;
+  self_shadow: uint8 = 0;
+  texture_alpha_test: uint8 = 0;
+  DepthComparisonFunction: DepthComparison = 0;
+
+  StaticParam: UberShaderSettings;
+  depth_bias: int32;
+  f18: float;
+  f19: float;
+}

@@ -1,0 +1,20 @@
+namespace Hayabusa.Terrain;
+
+file_extension "trins";
+
+table Instance {
+    //Yup, they could've used a union to define instance types 
+    //Such as Scale Rotate Translate Buffers
+    //But nope, they just went with a byte buffer
+    //Good luck parsing that later
+    byte_buffer: [uint8];
+}
+
+table TRINS{
+        instance_type: string;
+        unk_1: uint32 = 0x1;
+        unk_2: uint32 = 0x2;
+        res_3: uint32 = 0x0;
+        unk_4: Instance;
+}
+root_type TRINS;
