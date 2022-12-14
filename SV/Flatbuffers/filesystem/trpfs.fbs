@@ -1,0 +1,8 @@
+namespace Titan.FileSystem;
+
+table TRPFS {
+	file_hashes: [uint64];
+	file_offsets: [uint64];
+}
+
+root_type TRPFS;

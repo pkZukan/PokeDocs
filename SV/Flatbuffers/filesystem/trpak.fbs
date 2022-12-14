@@ -1,0 +1,23 @@
+namespace Titan.FileSystem;
+
+enum EncryptType : int8 {
+    None = -1,
+    Zlib = 1,
+    Lz4 = 2,
+    Oodle = 3,
+}
+
+table FileEntry {
+    res_0: uint32;
+    encrypt_type: EncryptType = -1;
+    unk_2: uint8;
+    file_size: uint64;
+    byte_buffer: [uint8];
+}
+
+table TRPAK {
+    file_hashes: [uint64];
+    file_entry: [FileEntry];
+}
+
+root_type TRPAK;
