@@ -26,7 +26,18 @@ struct GenderData {
 }
 
 struct EvoData {
-    species: uint16;
+    level: uint16;
+    method: uint16;
+	arg: uint16;
+	res0: uint16;
+	res1: uint16;
+	res2: uint16;
+	species: uint16;
+	form: uint16;
+}
+
+struct Hatch {
+	species: uint16;
     form: uint16;
     region: uint16;
     can_evolve: uint16;
@@ -56,15 +67,15 @@ table PersonalData {
     gender: GenderData;
     group_1: uint8;
     group_2: uint8;
-    evolution_data: EvoData;
+    hatch: Hatch;
     hatch_steps: uint8;
     base_friendship: uint8;
-    unk_value: uint16;
+    base_exp: uint16;
     evo_stage: uint8;
     unk_flag: uint8;
     yield_info: StatInfo;
     stats: StatInfo;
-    evo_table: uint32;
+    evo_table: EvoData;
     technical_machines: [uint16];
     egg_moves: [uint16];
     reminder_moves: [uint16];
