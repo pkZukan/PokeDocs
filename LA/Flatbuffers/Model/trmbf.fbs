@@ -2,22 +2,18 @@ namespace Hayabusa.Model;
 
 file_extension "trmbf";
 
-table Indexes {
-    list:[ubyte];
+table ByteBuffer {
+    data: [ubyte];
 }
 
-table Vertices {
-    list: [ubyte];
-}
-
-table Buffer {
-    index_buffer: [Indexes];
-    vertex_buffer: [Vertices];
+table MeshBuffer {
+    index_buffer: [ByteBuffer];
+    vertex_buffer: [ByteBuffer];
 }
 
 table TRMBF {
-    unused: uint32;
-    buffers:[Buffer];
+    res_0: uint32;
+    buffers: [MeshBuffer];
 }
 
 root_type TRMBF;
