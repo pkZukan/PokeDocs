@@ -1,28 +1,28 @@
 file_extension "trsha";
 
-table SlotMapping {
-    string_value: string;
-    uint_value: uint32;
+table KeyValuePair {
+    key: string;
+    value: uint32;
 }
 
-table SlotMap {
-    slot_name: string;
-    slot_values: [SlotMapping];
-    bool_1: uint8;
-    bool_2: uint8;
-    bool_3: uint8;
-    slot_index: uint8;
-    offset: uint32;
+table BindingMap {
+    binding_name: string;
+    value_lookup: [KeyValuePair];
+    is_required: uint8; // Maybe is required?
+    global_bool_1: uint8; // Always 1 on global params, 0 on shader params
+    global_bool_2: uint8; // Always 1 on global params, 0 on shader params
+    binding_index: uint8;
+    write_mask: uint32;
 }
 
 table TRSHA {
     name: string;
     file_name: string;
-    shader_param: [SlotMap];
-    global_param: [SlotMap];
-    param_buffer: [uint32]; //Contains Offset and Value pairs of uint32 each
-    has_shader_param: bool = false; //maybe contains shader_param
-    has_global_param: bool = false; //maybe contains global_param
+    shader_bindings: [BindingMap];
+    global_bindings: [BindingMap];
+    bindings_buffer: [uint32]; // Contains some offset and Index pairs of uint32 each. Is repeated at least twice, but occasionally more
+    has_shader_bindings: bool = false;
+    has_global_bindings: bool = false;
 }
 
 root_type TRSHA;

@@ -2,20 +2,32 @@ namespace Hayabusa.Model;
 
 file_extension "trpokecfg";
 
+enum SpeciesSize : byte
+{
+    Size_S = 0,
+    Size_M = 1,
+    Size_L = 2,
+    Size_XL = 3,
+}
+
 table TRPOKECFG {
-        unk_0: uint8;
-        unk_1: float;
-        unk_2: float;
-        unk_3: float;
-        unk_4: float;
-        unk_5: float;
-        unk_6: float;
-        unk_7: float;
-        unk_8: float;
-        unk_9: float;
-        unk_10: float;
-        unk_11: float;
-        unk_12: float;
+    size_index: SpeciesSize;
+
+    unk_1: float;
+    unk_2: float;
+    unk_3: float;
+
+    inframe_vertical_rot_y_origin: float;
+    inframe_bottom_y_offset: float;
+    inframe_center_y_offset: float;
+
+    inframe_left_rotation: float;
+    inframe_right_rotation: float;
+    unk_9: float;
+
+    unk_10_y_offset: float; // Related to y offset (see mons that fly above the ground eg. zubat)
+    unk_11_y_offset: float; // Related to y offset (see mons that fly above the ground eg. zubat)
+    unk_12_y_offset: float; // Related to y offset (see mons that fly above the ground eg. zubat)
 }
 
 root_type TRPOKECFG;

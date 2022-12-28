@@ -1,0 +1,37 @@
+namespace Hayabusa.Util;
+
+struct Vec3 {
+    x: float;
+    y: float;
+    z: float;
+}
+
+struct Vec4 {
+    w: float;
+    x: float;
+    y: float;
+    z: float;  
+}
+
+struct RGBA {
+    r: float;
+    g: float;
+    b: float;
+    a: float;
+}
+
+table AABB {
+    min: Vec3;
+    max: Vec3;
+}
+
+struct Sphere {
+    center: Vec3;
+    radius: float;
+}
+
+table Transform {
+    scale: Vec3;
+    rotation: Vec3;
+    translation: Vec3;
+}

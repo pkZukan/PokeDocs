@@ -1,103 +1,98 @@
+include "math.fbs";
+
 namespace Hayabusa.Model;
 
 file_extension "trmtr";
 
-struct RGBA {
-        r: float;
-        g: float;
-        b: float;
-        a: float;
-}
-
 enum UVWrapMode: uint32 {
-        //Time to test these as bit fields?
-        WRAP = 0, //0000
-        CLAMP = 1, //0001
-        MIRROR = 6, //0110
-        MIRROR_ONCE = 7, //0111
+    //Time to test these as bit fields?
+    WRAP = 0, //0000
+    CLAMP = 1, //0001
+    MIRROR = 6, //0110
+    MIRROR_ONCE = 7, //0111
 }
 
 table SamplerState {
-        SamplerState_0: uint32 = 0x0; //Never used
-        SamplerState_1: uint32 = 0x0; //Never used
-        SamplerState_2: uint32 = 0x0; //Never used
-        SamplerState_3: uint32 = 0x0; //Never used
-        SamplerState_4: uint32 = 0x0; //Never used
-        SamplerState_5: uint32 = 0x0; //Never used
-        SamplerState_6: uint32 = 0x0; //Never used
-        SamplerState_7: uint32 = 0x0; //Never used
-        SamplerState_8: uint32 = 0x0; //Never used
-        repeat_u: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
-        repeat_v: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
-        repeat_w: UVWrapMode = WRAP; //Never used
-        border_color: RGBA;
+    sampler_state_0: uint32 = 0x0; //Never used
+    sampler_state_1: uint32 = 0x0; //Never used
+    sampler_state_2: uint32 = 0x0; //Never used
+    sampler_state_3: uint32 = 0x0; //Never used
+    sampler_state_4: uint32 = 0x0; //Never used
+    sampler_state_5: uint32 = 0x0; //Never used
+    sampler_state_6: uint32 = 0x0; //Never used
+    sampler_state_7: uint32 = 0x0; //Never used
+    sampler_state_8: uint32 = 0x0; //Never used
+    repeat_u: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
+    repeat_v: UVWrapMode = WRAP; //0x1, 0x6 or 0x7
+    repeat_w: UVWrapMode = WRAP; //Never used
+    border_color: RGBA;
 }
 
 table Float4Parameter {
-        color_name: string;
-        color_value: RGBA; 
+    property_binding: string;
+    color_value: RGBA; 
 }
 
 table FloatParameter {
-        float_name: string;
-        float_value: float;
+    property_binding: string;
+    float_value: float;
 }
 
 table IntParameter {
-        int_name: string;
-        int_value: int32 = -1;
+    property_binding: string;
+    int_value: int32;
 }
 
 table StringParameter {
-        string_name: string;
-        string_value: string;
+    property_binding: string;
+    string_value: string;
 }
 
 table Shader {
-        shader_name: string;
-        shader_values: [StringParameter];
+    shader_name: string;
+    shader_values: [StringParameter];
 }
 
-table Texture  {
-        texture_name: string;
-        texture_file: string;
-        texture_slot: uint32 = 0;
+table TextureParameter  {
+    property_binding: string;
+    texture_file: string;
+    texture_slot: uint32;
 }
 
-table Byte_Extra {
-        //Only pm0448 has it as 0x0 in Transparent Shader
-        value: int8 = -1; 
+table WriteMask {
+    //Only pm0448 has it as 0x0 in Transparent Shader
+    mask: uint8 = 255;
 }
 
 table Int_Extra {
-        res_0: uint32;
-        //0 when Transparent
-        //1 when NonDirectional
-        value: int32 = -1;
+    res_0: uint32;
+    //0 when Transparent
+    //1 when NonDirectional
+    value: int32 = -1;
 }
 
-table Material{
-        name: string; 
-        shaders: [Shader]; 
-        textures: [Texture];
-        samplers: [SamplerState]; 
-        float_parameter: [FloatParameter];
-        unk_5: string; //Always empty
-        float4_light_parameter: [Float4Parameter];
-        float4_parameter: [Float4Parameter];
-        unk_8: string; //Always empty
-        int_parameter: [IntParameter];
-        unk_10: string; //Always empty
-        unk_11: string; //Always empty
-        unk_12: string; //Always empty
-        byte_extra: Byte_Extra;
-        int_extra: Int_Extra;
-        alpha_type: string;
+table MaterialPass {
+    name: string; 
+    shaders: [Shader]; 
+    texture_parameters: [TextureParameter];
+    samplers: [SamplerState]; 
+    float_parameters: [FloatParameter];
+    unk_5: [string]; //Always empty
+    float4_light_parameters: [Float4Parameter];
+    float4_parameters: [Float4Parameter];
+    unk_8: [string]; //Always empty
+    int_parameters: [IntParameter];
+    unk_10: [string]; //Always empty
+    unk_11: [string]; //Always empty
+    unk_12: [string]; //Always empty
+    write_mask: WriteMask; // Maybe shader output write mask?
+    int_extra: Int_Extra;
+    alpha_type: string;
 }
 
-table TRMTR{
-        res_0: uint32;
-        materials: [Material];
+table TRMTR {
+    res_0: uint32;
+    material_passes: [MaterialPass];
 }
 
 root_type TRMTR;

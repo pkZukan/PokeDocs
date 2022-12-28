@@ -14,7 +14,7 @@ table MaterialMapper {
 }
 
 table EmbeddedTRACM {
-    bytebuffer: [uint8];
+    byte_buffer: [uint8];
 }
 
 //Appears only on Arceus?
@@ -27,9 +27,9 @@ table MaterialProperties {
     res_5: [uint32];
 }
 
-table MMT {
+table MaterialTable {
     name: string;
-    material_name: [string];
+    file_names: [string];
     material_switches: [MaterialSwitches];
     material_properties: [MaterialProperties];
 } 
@@ -37,7 +37,7 @@ table MMT {
 table TRMMT {
     res_0: uint32;
     res_1: uint32;
-    material: [MMT];
+    material: [MaterialTable];
 }
 
 root_type TRMMT;
