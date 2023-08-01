@@ -16,7 +16,7 @@ enum Attribute : uint32 {
     BLEND_WEIGHTS,
 }
 
-enum Type: uint32 {
+enum InputLayoutFormat: uint32 {
     NONE = 0,
     R8_G8_B8_A8_UNSIGNED_NORMALIZED = 20,
     R8_G8_B8_A8_UNSIGNED = 22,
