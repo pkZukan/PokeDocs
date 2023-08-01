@@ -3,38 +3,35 @@ namespace Hayabusa.Resource;
 file_extension "trpmcatalog";
 
 table VersionInfo {
-    unk_0: uint32;
-    unk_1: uint32;
+    major: uint32;
+    minor: uint32;
 }
 
 table SpeciesInfo {
-    species_number: uint16;
-    form_number: uint16;
+    species: uint16;
+    form: uint16;
+    gender: uint8;
 }
 
-table AnimationInfo {
-    anim_name: string;
-    anim_path: string;
-}
-
-table LocatorInfo {
-    loc_name: string;
-    loc_path: string;
+table FileReference {
+    name: string;
+    path: string;
 }
 
 table CatalogEntry {
-    speciesinfo : SpeciesInfo;
-    model: string;
-    material: string;
-    config: string;
-    unk_0: uint32;
-    animations: [AnimationInfo];
-    locators: [LocatorInfo];
+    species_info : SpeciesInfo;
+    model_path: string;
+    material_table_path: string;
+    config_path: string;
+    unk_0: uint8;
+    animations: [FileReference];
+    effects: [FileReference];
+    arceus_type: uint32;
 }
 
 table Catalog {
-    unk_0 : VersionInfo;
-    unk_1: [CatalogEntry];
+    version : VersionInfo;
+    table: [CatalogEntry];
 }
 
 root_type Catalog;
