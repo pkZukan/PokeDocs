@@ -9,7 +9,7 @@ enum VertexAttribute : uint32 {
     TANGENT,
     BINORMAL,
     COLOR,
-    TEX_COORD,
+    TEXCOORD,
     BLEND_INDICES,
     BLEND_WEIGHTS,
     USER,
@@ -26,22 +26,22 @@ enum MorphAttribute: uint32  {
 
 enum Type: uint32 {
     NONE = 0,
-    R8_G8_B8_A8_UNSIGNED_NORMALIZED = 20,
-    W8_X8_Y8_Z8_UNSIGNED = 22,
-    X32_UINT = 36,
-    X32_INT = 37,
-    W16_X16_Y16_Z16_SIGNED_NORMALIZED = 39,
-    W16_X16_Y16_Z16_FLOAT = 43,
-    X32_Y32_FLOAT = 48,
-    X32_Y32_Z32_FLOAT = 51,
-    W32_X32_Y32_Z32_FLOAT = 54,
+    RGBA_8_UNORM = 20,
+    RGBA_8_UNSIGNED = 22,
+    R_32_UINT = 36,
+    R_32_INT = 37,
+    RGBA_16_UNORM = 39,
+    RGBA_16_FLOAT = 43,
+    RG_32_FLOAT = 48,
+    RGB_32_FLOAT = 51,
+    RGBA_32_FLOAT = 54,
 }
 
 enum PolygonType: uint32 {
-    X8_Y8_Z8_UNSIGNED = 0,
-    X16_Y16_Z16_UNSIGNED,
-    X32_Y32_Z32_UNSIGNED,
-    X64_Y64_Z64_UNSIGNED,
+    UINT8 = 0,
+    UINT16,
+    UINT32,
+    UINT64,
 }
 
 struct Sphere {
