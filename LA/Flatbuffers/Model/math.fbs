@@ -1,4 +1,4 @@
-namespace Hayabusa.Util;
+namespace Hayabusa.Model;
 
 struct Vec3 {
     x: float;
