@@ -45,7 +45,7 @@ table TRMDL {
     lods:[Lod];
     bounds: Bounds;
     unk_vec:Vec4;
-    unk7: uint32;
+    trltt: string;
     unk8: uint32;
     unk9: uint32;
 }
