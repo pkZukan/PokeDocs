@@ -16,11 +16,26 @@ table Entry {
     anim_files: [string];
 }
 
+table Entry2 {
+    name: string;
+    entries: [Entry3];
+}
+
+table Entry3 {
+    name: string;
+	type: string;
+    unk0: [Entry4];
+}
+table Entry4 {
+    type: string;
+	enable: uint;
+}
+
 table CharacterCreationData {
     entries: [Entry];
     unk1: someTable2;
     unk2: uint;
-    unk3: string;
+    unk3: [Entry2];
 }
 
 root_type CharacterCreationData;
