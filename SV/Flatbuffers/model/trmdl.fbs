@@ -44,7 +44,7 @@ table TRMDL {
     materials:[string];
     lods:[Lod];
     bounds: Bounds;
-    unk_vec:Vec4;
+    tex_spc_loc:Vec4;
     trltt: string;
     unk8: uint32;
     unk9: uint32;
