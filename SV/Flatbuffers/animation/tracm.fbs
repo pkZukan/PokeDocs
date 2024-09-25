@@ -49,18 +49,63 @@ table TrackMaterialAnim {
     list: TrackMaterialChannels;
 }
 
+
+table TrackMaterialTimeline {
+    res_0: TrackConfig;
+    res_1: uint32;
+    material_track: [TrackMaterial];
+    unk_3: uint8; //maybe track length related?
+    unk_4: uint8; //maybe track length related?
+}
+
 table TrackMaterial {
     name: string;
     init_values: [TrackMaterialInit];
     anim_values: [TrackMaterialAnim];
 }
 
-table TrackMaterialTimeline {
-    res_0: uint32;
+table TrackBlendshapeInit {
+    mesh_name: string;
+    blendshape_list: [string];
+}
+
+table FixedBlendTrack {
+    value: float;
+}
+table DynamicBlendTrack {
+    value: [float];
+}
+table Framed16BlendTrack {
+	frames: [uint16];
+    value: [float];
+}
+table Framed8BlendTrack {
+	frames: [uint8];
+    value: [float];
+}
+union BlendTrack { FixedBlendTrack, DynamicBlendTrack, Framed16BlendTrack, Framed8BlendTrack }
+table TrackBlendshapeAnim {
+    key: uint32;
+	values: [float];
+}
+
+table TrackBlendShape {
+    name: string;
+    init_values: [TrackBlendshapeInit];
+    track: BlendTrack;
+	unk_4: uint32;
+}
+
+table blendtable {
+    name: string;
+}
+
+table BlendShapeTimeline {
+    config: TrackConfig;
     res_1: uint32;
-    material_track: [TrackMaterial];
-    unk_3: uint8; //maybe track length related?
-    unk_4: uint8; //maybe track length related?
+	res_2: [TrackBlendShape];
+	res_3: uint32;
+	blend_list: [blendtable];
 }
 
 table Track {
@@ -70,6 +115,7 @@ table Track {
     res_3: uint32; //Never used
     material_animation: TrackMaterialTimeline;
     material_flags: TrackFlags;
+	blendshape_animation: BlendShapeTimeline;
 }
 
 table TrackConfig {
@@ -83,6 +129,7 @@ table TRACM {
     tracks: [Track];
     len_1: uint8; //Related to length of tracks?
     len_2: uint8; //Related to length of tracks?
+	unk_4: uint8;
 }
 
 root_type TRACM;
