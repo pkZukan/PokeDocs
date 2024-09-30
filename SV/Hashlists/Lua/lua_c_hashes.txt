@@ -68,7 +68,7 @@
 0x060FED8E32F6564B main.ui.shop_restaurant.management.ShopRestaurantUIManager
 0x061D7D12C87267AA main.ui.raid_matching.top.RaidMatchingTopLoader
 0x061E77624541EB5A main.pokepicnic.contents.Wagon_PicnicContents
-0x06249860459C8E5A 
+0x06249860459C8E5A dll_util.PhysUtil
 0x0627D8610E8BFF05 main.ui.title.first_start.player_select_report.state.PlayerSelectReportUIStete
 0x0629717F9C43219E main.management.dressupItem.DressupStylePartsManager
 0x066AE0C2BD6D8CEE main.field.behaviour.scenario.main.champion.gym.kusa.GymKusaPokeRestlessState
@@ -1469,7 +1469,7 @@
 0x71E20570A8F58A79 main.ui.hairsalon.util.HairsalonShopUIText
 0x7204FD1E4DCDF7AA 
 0x722EEE9E927245BA main.management.dressupItem.DressupPlayerPartsManager
-0x722F6EF1C80804DB 
+0x722F6EF1C80804DB dll_util.miyamoto.ConvertString
 0x7239442CC10DC4BC main.ui.mapicon.MapIconUtility
 0x7255B919FCF73022 main.field.gimmick.hidden_item.ItemPointTypeBiomeTable
 0x72560D90C33BC289 main.env.weather._WeatherSchedule.LotteryRand
@@ -1975,7 +1975,7 @@
 0x9769049763274AD8 
 0x97862D1842859795 main.nushi.hiko.HikoNushiEscapePerformance
 0x9798141731D2FD73 main.ui.ymap_overall.SceneYMapOverall
-0x97B74412253C3332 
+0x97B74412253C3332 dll_util.miyamoto.ColorUtil
 0x97CD63DD0A343506 main.pokepicnic.database.IngUniqueParam
 0x97CF369079268F17 
 0x9813692A25E9E386 main.ui.option.view.OptionUIView
@@ -2189,7 +2189,7 @@
 0xAAB2ADFC18C1202F main.playables.free_move.trig.LadderConstant
 0xAAB8219B9360D02F 
 0xAAC2A8EB9066A751 main.event.general.area_script.AreaExit_subarea_fairyteam
-0xAAC30701973E8223 
+0xAAC30701973E8223 dll_util.Easing
 0xAAD7A09C980C2598 main.ui.photomode.main.ui.PhotomodeUIState
 0xAADC0D43FC04708B main.ui.dressup.shop.view.input.DressupUIShopInput
 0xAAE651594DEABAFA main.ui.btlspot.state_machine.normal.BattleSpotStateSelectBtlTeam
@@ -2326,7 +2326,7 @@
 0xB7EEB53C72FB3B6D 
 0xB81A7F5D0CBF5CB0 dll_danbattle.ui.PartnerUIView
 0xB82B20AC08D290B0 
-0xB87925D1C1B918F9 
+0xB87925D1C1B918F9 dll_util.StrUtil
 0xB8BE81A4209D50E2 main.battle.BattleSickEffectManager
 0xB8C06B1271742A26 main.ui.pokelist.pokelist_state_machine.pokelist_battle_type.PokelistRecoveryUseItemState
 0xB90497FB1A1A942B 
@@ -2539,7 +2539,7 @@
 0xC924006D5C703655 
 0xC92700E20E160273 main.ui.pokedex.view.detail.PokedexUIDetailBgView
 0xC9374FDD94E2F0F4 main.event.debug.DebugSpexMiyaharaYusuke
-0xC93E4D9B3BF1544F 
+0xC93E4D9B3BF1544F dll_util.miyamoto.DebugLineWrapper
 0xC942293ECBCABA70 
 0xC957A07046B9E469 main.event.general.area_script.master.AreaScriptMaster
 0xC962FEC3D45B00B0 main.ajito.data.formatter.AjitoLevelFormatter
@@ -2947,7 +2947,7 @@
 0xE5F2D16700950E7F 
 0xE5F2D367009511E5 
 0xE5FCBF030A1BA742 
-0xE5FCD7D9D8F34718 
+0xE5FCD7D9D8F34718 dll_util.Assert
 0xE6039962576F5843 main.field.behaviour.effect.FieldEffectSeaIdlling
 0xE613880BFE6C0E5F main.nushi.jimen.JimenNushiEscapePerformance
 0xE6145FDB1845D0BD main.management.hairsalon.HairsalonPlayerPartsManager
@@ -3022,7 +3022,7 @@
 0xEC47F5D6AD9A0D95 main.nushi.dragon.DragonNushiFirstBattleEventManager
 0xEC4AF2CA78D2AC3F 
 0xEC4BF82A35D1E447 main.ui.box.BoxDataManager
-0xEC576A05F672A661 
+0xEC576A05F672A661 dll_util.DebugLog
 0xEC845CE3BBEAFE9F 
 0xEC85CB658F7D7A45 main.event.general.danbattle.DanAreaOutWarpEvent
 0xEC89469050009A18 main.ui.shop.purchase.view.ShopUIPurchaseView
