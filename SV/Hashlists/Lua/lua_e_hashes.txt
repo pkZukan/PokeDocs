@@ -1,217 +1,217 @@
-0x011C7BDAEC8DC3AB 
-0x024FDC015D249932 
-0x0325C4DFFFF5A481 
+0x011C7BDAEC8DC3AB main.field.gimmick.fixed_symbol.parts._FixedSymbolSpawnable.ConsumeState
+0x024FDC015D249932 main.event.general.system.map_change.base._FieldSimpleEffectEmit.EmitState
+0x0325C4DFFFF5A481 main.ajito.data.enums.AjitoTypeEnum
 0x048715B79C692C5A main.ui.system_ui.SystemUiMessageType
 0x04CF1C79BE2BE8D9 main.event.general.gym.base.ExcitementState
-0x05568409465076C2 
+0x05568409465076C2 main.battle.ui._BattleUiRaidEmote.RaidEmoteUiState
 0x05B9A42E823F2F78 main.bgm.BGMEventType
-0x062BF08AFA8E100D 
-0x06438A455E7D6DD8 
-0x06484D7CC7B9D925 
-0x09A82F76179381A5 
-0x0C02945B368B52B1 
-0x0C49369EC278F8FC 
-0x0DBCDAC34F84DEB3 
+0x062BF08AFA8E100D main.ui.pokelist._PokeList.PokeListSwapItemState
+0x06438A455E7D6DD8 main.ui.leaguecard.ui.top.LeaguCardHideFrontState
+0x06484D7CC7B9D925 main.field.behaviour.exclusion_area._ExclusionArea.AIExclusionAreaEnum
+0x09A82F76179381A5 main.util.tween.TweenPathType
+0x0C02945B368B52B1 main.ui.magical_exchange._MagicalExchangeBoxSelectSequence.State
+0x0C49369EC278F8FC main.event.command.LookAtDirection
+0x0DBCDAC34F84DEB3 main.event.general.gym.base._Gym_mizu_seri_buyer_event.SelectType
 0x11E052462DC5FAF5 main.event.general.gym.base.CameraType
-0x123A38E102608D56 
-0x12F2DCC1CC9566CC 
-0x13F8BAADE9C2F4B8 
-0x13FC1CDE1F274562 
-0x16103B24B7B3BD27 
+0x123A38E102608D56 main.ui.net_topmenu.state_machine.base.NetTopMenuStateBase_MatchingResult
+0x12F2DCC1CC9566CC main.ui.btlspot._BattleSpotUIManager.BattleSpotUIManagerState
+0x13F8BAADE9C2F4B8 main.nushi.sound.NushiSoundRockEventSeGlobalType
+0x13FC1CDE1F274562 main.ui.bag.bag_ui_state_machine.FormChangeState
+0x16103B24B7B3BD27 main.ajito.data.enums.AjitoDifficultEnum
 0x162AEA55AB420F05 main.battle.ui.BattleUiMode
-0x169CFB531B1B9CD9 
+0x169CFB531B1B9CD9 main.ui.btlspot.state_machine.common._BattleSpotStateCommonMatching.FlowSet_StartAndValidateResult
 0x1731A5EFC21F1B20 main.ui.btlspot.ui.BattleSpotUIStandbyMode
 0x1734D624743EA6EE main.ui.btlspot.ui.TopState
-0x176ABF49F8D16F9F 
-0x185C2285FF1A21B8 
-0x188930210D7B9246 
+0x176ABF49F8D16F9F main.pokepicnic.cooking.LunchPickAnimeMode
+0x185C2285FF1A21B8 main.battle.ui.CommandTimeCautionWindowState
+0x188930210D7B9246 main.field.action.field_npc._ActionFieldNpcLookAtTarget.LookAtTarget
 0x1898AE800BCD6E76 main.field.behaviour.scenario.main.champion.gym.mushi.AnimationType
 0x18B9825906F730CF 
-0x19CA982E19C894B3 
-0x200249B41F9595B5 
+0x19CA982E19C894B3 main.battle.parts.ZoomCameraTargetType
+0x200249B41F9595B5 main.evolution.EvolutionDemoTmlState
 0x218464FC4A930627 main.battle.State
-0x221FD5B116B492C6 
-0x24A0616409910158 
-0x271AB66A059C124E 
+0x221FD5B116B492C6 main.ui.status.state_machine.info._StatusStateInfoMarking.MarkingWindowState
+0x24A0616409910158 main.ui.pokelist.pokelist_state_machine.pokelist_battle_type._PokeListBattleReliveSelectState.PokelistBattleReliveSelectState
+0x271AB66A059C124E main.event.general.school.base.MenuType
 0x27F7FCC4B63C49EF main.evolution.EvolutionMessageType
-0x27FF633BFDACDB13 
-0x2817D85CE4809B9D 
-0x28ABF2D092CE80F2 
+0x27FF633BFDACDB13 main.event.general.system.ItemGetChara
+0x2817D85CE4809B9D main.battle.ui._BattleUiTokuseiWindow.TokuseiWindowRenewState
+0x28ABF2D092CE80F2 main.ui.pokemon_select.SelectTopState
 0x296597ACED83B2B6 main.nushi.NushiDebugColor
-0x2A14B3B91F9202F2 
+0x2A14B3B91F9202F2 main.ui.xmenu.xmenu_state_machine.XMenuStorageToBagFormChangeState
 0x2B2BFF6A9A5AA267 main.ui.schoolmap.SchoolMapOpenMode
-0x2BCEE4A6B6D5E6E8 
-0x2E94BB843EB1CA6C 
-0x2ED35D9AA3ADD7DE 
-0x302EE80194CC5ACE 
-0x30D2448BCE704359 
-0x30DC0F8E9CCF6BEC 
+0x2BCEE4A6B6D5E6E8 main.ui.status.state_machine.note._StatusStateRibon.RibbonState
+0x2E94BB843EB1CA6C main.ui.leaguecard.ui.badge.LeagueCardUIBadgeTopState
+0x2ED35D9AA3ADD7DE main.ui.net_btl.net.NbrAwaiterCommandResult
+0x302EE80194CC5ACE main.ui.schoolmap._SchoolMapCursorManager.SchoolMapCursorManagerState
+0x30D2448BCE704359 main.system.game_event.XMenuEventType
+0x30DC0F8E9CCF6BEC main.egg_hatch.EggHatchMessageType
 0x366415E12D9CEAB1 main.ui.system_ui.message_window.MessageWindowType
-0x36FFD97A711C2D29 
-0x37501C4FB079F815 
+0x36FFD97A711C2D29 main.field.exclusion_area.ExclusionAreaShapeDesc
+0x37501C4FB079F815 main.field_management._PlayerGazeManager.Target
 0x37B5FA12665B2997 
 0x37B96C515BA1BBD4 main.event.general.gym.base.BgmType
 0x38B7F1DDED5027FE main.field.behaviour.scenario.main.champion.gym.kusa.AnimationType
 0x396C103D92DB224E main.ui.btlspot.ui.BattleSpotUIRankUpMode
-0x3B3CF19DBB51596A 
+0x3B3CF19DBB51596A main.event.general.gym.base._Gym_mizu_seri_buyer_player.SelectType
 0x3B7F0D92802792CD 
 0x3D00E8B4A3F271D6 
-0x400D8CAA1B9C4210 
+0x400D8CAA1B9C4210 main.ui.photomode.interfaces.ui.model.PhotomodeUIMode
 0x4188FFC8E4C958D0 
-0x4224DD9032335D70 
+0x4224DD9032335D70 main.ui.leaguecard.state.LeagueCardState
 0x4330DFB428FDF515 main.ui.net_btl.ui.MessageType
-0x453241258B312983 
-0x47DB8037FE2FBF76 
-0x48486A097C7F111B 
-0x4A641B7E45E2929B 
-0x4B1E7C134D5A32FC 
-0x4BE4F18151786EC5 
-0x4E827C0D9A74C75B 
-0x4EB037331B0BCBE3 
-0x4ED4DE496EDA8069 
-0x4F48B7994A6444A6 
-0x4F751658A8A413BB 
-0x4FFA0895DDBBF578 
-0x51E64E70A0BF7302 
+0x453241258B312983 main.system.game_event.FailedRideType
+0x47DB8037FE2FBF76 main.ui.btlspot.state_machine.common.BattleSpotStateCommonMatchingResult
+0x48486A097C7F111B main.ui.btlspot._BattleSpotUISceneLoader.BattleSpotSceneLoadState
+0x4A641B7E45E2929B main.field.behaviour.module.desc.BehaviorModuleDescType
+0x4B1E7C134D5A32FC main.ui.team_circle.CanSendStatus
+0x4BE4F18151786EC5 main.nushi.sound.NushiSoundRockEventSeAcompType
+0x4E827C0D9A74C75B main.ui.schoolmap._SchoolMapStateManager.SchoolMapManagerState
+0x4EB037331B0BCBE3 main.ui.btlstadium._BtlStadiumManager.BtlStadiumManagerState
+0x4ED4DE496EDA8069 main.ui.status.ui.skill.StatusSkillRadarChartMode
+0x4F48B7994A6444A6 main.network.receiver.TeamMemberStatus
+0x4F751658A8A413BB main.battle.ui._BattleUiSystem.BattleUiActionSelectState
+0x4FFA0895DDBBF578 main.event.popup_window._PopupWindowSequence.WindowState
+0x51E64E70A0BF7302 main.ui.status.state_machine.skill._StatusStateSkillWazaSwap.WazaSwapState
 0x51FB8B36D6855CC5 main.egg_hatch.StagingType
-0x526FC81C37743B20 
-0x572EDE70A1F21DEF 
-0x57817BED072A543C 
+0x526FC81C37743B20 main.ui.pokelist._PokeList.PokeListSwapState
+0x572EDE70A1F21DEF main.field.gimmick.coin_symbol.parts.CoinSymbolState
+0x57817BED072A543C main.ui.status._StatusUIManager.StatusUIManagerState
 0x57F0ABF24D315312 main.ui.btlspot.ui.BattleSpotUIRewardMode
-0x58676A1B3C31413C 
-0x5918BECABEC63037 
+0x58676A1B3C31413C main.ui.leaguecard.state.PhotoChangeType
+0x5918BECABEC63037 main.system.coroutine.InternalState
 0x5DBDFFB89266BA2F main.nushi.NushiMessageType
-0x5EA71525BB671579 
-0x632E770702F22F60 
-0x635B63A0EBE3EEF7 
-0x65E42DC91C740C14 
-0x6659210A31B83D7F 
-0x6AEB05CB3657EA4B 
+0x5EA71525BB671579 main.field.behaviour.scenario.main.champion.gym.koori._Gym_koori_course_control.EventType
+0x632E770702F22F60 main.system.game_event.NetBattleStartRequest
+0x635B63A0EBE3EEF7 main.nushi.sound.NushiSoundRockEventBgmType
+0x65E42DC91C740C14 main.ui.bag.bag_ui_state_machine.State
+0x6659210A31B83D7F main.field.action.field_npc.State
+0x6AEB05CB3657EA4B main.ui.team_circle._TeamCircleNetwork.Sequence
 0x6C246E62B9A9864F main.battle.PlayMode
-0x6C5649285BB9815A 
-0x6E90F62953FBDA38 
-0x6F483BBE352450E6 
-0x7170874584D6BE2A 
-0x73D8BC8E4E068E8D 
-0x74199BDEC018C7D5 
+0x6C5649285BB9815A main.field.behaviour.module._TrafficStateModule.TrafficState
+0x6E90F62953FBDA38 main.ui.net_btl.net.NbrClientStatus
+0x6F483BBE352450E6 main.system.game_event.DisconnectType
+0x7170874584D6BE2A main.ui.net_btl._NetworkBattleUIManager.NetworkBattleUIManagerState
+0x73D8BC8E4E068E8D main.field.exclusion_area._ExclusionAreaManager.DynamicAreaCreationState
+0x74199BDEC018C7D5 main.system.game_event.GameEventEncountSequence
 0x76B5D970FCFD25CE main.ui.btlspot.ui.BattleSpotUIHeaderFadeState
 0x77ACE4F1872355DD main.ui.btlspot.ui.BattleSpotUIPreviousResultMode
-0x788BFF1961D5E87A 
-0x78BF1391953C9031 
-0x79FD6FEE9D9C3322 
-0x7D0EC8AD7EAF7A5A 
-0x7D53606128C32FFD 
-0x7E9A1F270945A1F2 
+0x788BFF1961D5E87A main.ui.pokelist._PokeList.PokeListErrorMessageState
+0x78BF1391953C9031 main.system.game_event.GameEventEncountOtherSeq
+0x79FD6FEE9D9C3322 main.playables.free_move.ctrl.req.RideChangeType
+0x7D0EC8AD7EAF7A5A main.battle.ui._BattleUiPokeList.BattleUiPokeListState
+0x7D53606128C32FFD main.battle.parts._BattlePokemon.State
+0x7E9A1F270945A1F2 main.ui.btlspot.ui.UIPokemonSelectMode
 0x810BF82B6CB36555 main.ui.system_ui.SystemUiContextMenuType
-0x81A2DD36CD16F351 
-0x82BBDE91830006EA 
-0x83638CA25A14AA55 
-0x841E8CD95549156F 
-0x849D9C549A1CAE81 
-0x84F801C4322109C3 
-0x8555FCCE37920644 
-0x864353C2035FFBB3 
-0x870AAD913338EE01 
-0x87995251705228E4 
-0x89BBE0D6FC2367A4 
-0x89DB4BC238C5F41D 
+0x81A2DD36CD16F351 main.battle.parts.LocationInfo
+0x82BBDE91830006EA main.field.behaviour.exclusion_area._ExclusionArea.ExclusionAreaShapeEnum
+0x83638CA25A14AA55 main.battle.director.ResultType
+0x841E8CD95549156F main.ui.btlspot.ui.CompetitionTopMode
+0x849D9C549A1CAE81 main.battle.parts._BattleTrainer.State
+0x84F801C4322109C3 main.battle.ui.ActionSceletResult
+0x8555FCCE37920644 main.event.general.school.base.StudyMapType
+0x864353C2035FFBB3 main.ui.net_topmenu._NetTopMenuManager.NetTopMenuSceneState
+0x870AAD913338EE01 main.ui.leaguecard.ui.badge.LeagueCardUIBadgeSingleState
+0x87995251705228E4 main.battle.IdleCameraState
+0x89BBE0D6FC2367A4 main.ui.xmenu.xmenu_state_machine._XMenuNetTopMenuState.NetTopMenuState
+0x89DB4BC238C5F41D main.ui.leaguecard.ui.top.LeaguCardRevealFrontState
 0x8B9FEE2834B98ACE main.form_change.StagingType
-0x8C4D988E0E7137CE 
-0x8C508418198E5E58 
-0x8CB445DE21FD4BFF 
-0x8E40DFB6EBDAB388 
+0x8C4D988E0E7137CE main.ui.net_btl.net._NbrClientHandler.State
+0x8C508418198E5E58 main.battle.parts.FreeCameraMode
+0x8CB445DE21FD4BFF main.ui.status.state_machine.info._StatusStateInfoBag.StatusStateInfoBagState
+0x8E40DFB6EBDAB388 main.playables.misc.Result
 0x8EC0B76A6C304FC5 main.ui.xmenu.LoadXMenuState
-0x8EFFC743E728DB60 
-0x8F6F0FF2A6A070B1 
+0x8EFFC743E728DB60 main.ui.btlspot.ui.UIPageMode
+0x8F6F0FF2A6A070B1 main.ui.net_topmenu._NetTopMenuUISceneLoader.NetTopMenuSceneLoadState
 0x91D41B47D038D592 main.form_change.FormChangeMessageType
-0x91E24F35A57D597C 
+0x91E24F35A57D597C main.pokepicnic.ui.view.CookingGameUIAnime
 0x933ACEA4D6BEEA8F main.ui.btlspot.ui.BattleSpotUIRuleMode
 0x97FE31A09270CAEE 
-0x98E78CBD490EFA6A 
-0x9A51BE4A7E22720B 
-0x9B765D342AB2364B 
+0x98E78CBD490EFA6A main.playables.free_move.ctrl.req.SelfieAction
+0x9A51BE4A7E22720B main.ui.leaguecard.ui.top.LeagueCardScrollState
+0x9B765D342AB2364B main.ui.status.state_machine.skill._StatusStateSkillBag.StatusStateInfoBagState
 0x9DA73E58873533CD 
-0xA0D5CB7A688EBC4C 
+0xA0D5CB7A688EBC4C main.system.game_event.Routine
 0xA226F8E4BD8D9C87 
 0xA4552630426F1460 main.field.behaviour.scenario.main.champion.gym.koori.CourseState
-0xA76FBEE031C2173E 
-0xA7ABBE7E5938AC86 
-0xAA09EF30B0D94BF7 
-0xAD246EF28384B86B 
-0xAE477FE8B7B2F7D4 
-0xAEAF61981FF56799 
-0xAF85302BE96D9BA7 
+0xA76FBEE031C2173E main.ui.btlspot.net.NetErrorType
+0xA7ABBE7E5938AC86 main.network.connect.InternetFlowResult
+0xAA09EF30B0D94BF7 main.ui.btlspot.state_machine.base.NetFlowResult1
+0xAD246EF28384B86B main.field.behaviour.module.base.SetupStatus
+0xAE477FE8B7B2F7D4 main.util.tween.TweenLoopType
+0xAEAF61981FF56799 main.battle.ui._BattleUiTokuseiWindow.TokuseWindowSingleState
+0xAF85302BE96D9BA7 main.field.action.field_npc.base.StateFieldNpc
 0xAFC933BC1EDD8023 main.form_change.FormChangeType
-0xAFE6C9339A36B5EE 
+0xAFE6C9339A36B5EE main.battle.SickEffectState
 0xB0872E7555AC4631 
-0xB358450E5C6E7CA7 
-0xB36879ACEEB624C4 
-0xB375BC9C13B3E957 
+0xB358450E5C6E7CA7 main.ui.team_circle.TeamMemberStatus
+0xB36879ACEEB624C4 main.field.gimmick.fixed_symbol.parts._FixedSymbolSave.FixedSymbolSaveTimeCycleType
+0xB375BC9C13B3E957 main.ui.btlspot.state_machine.common.BattleSpotStateCommonMatchingType
 0xB47746A9BD2E98B2 main.ui.team_circle.UIStatus
-0xB4EF1AE9F9963746 
-0xB7E12D8FCF6B6763 
+0xB4EF1AE9F9963746 main.battle.ui._BattleUiSystem.BattleUiStateInfoMode
+0xB7E12D8FCF6B6763 main.battle.director._BattleGetExp.Sequence
 0xB839E030ECEB2E81 main.ui.team_circle.CommandStatus
 0xB9C3CEF88C973E2F main.ui.net_topmenu.ui.MessageType
-0xBA6B4276B2F2F11F 
-0xBA8AC9DA848EF03E 
-0xBB2E4E8F09AFBEAA 
+0xBA6B4276B2F2F11F main.ui.btlspot._BattleSpotManager.State
+0xBA8AC9DA848EF03E main.ui.magical_exchange._MagicalExchangeTradeSequence.State
+0xBB2E4E8F09AFBEAA main.battle.director.BattleRaidEncountStep
 0xBDE0897BF656CF72 main.nushi.jimen.JimenNushiActorState
-0xBEE2ADF0737BF708 
-0xBFE2E0A84BF2AD4F 
-0xBFEC401B6945E030 
+0xBEE2ADF0737BF708 main.egg_hatch.EggHatchDemoTmlState
+0xBFE2E0A84BF2AD4F main.playables.misc.Handler
+0xBFEC401B6945E030 main.battle.ui._BattleUiBag.BattleUIBagState
 0xC1DFC6A53B3321B3 main.ui.util.MessageType
 0xC3EC395798B00520 main.evolution.StagingType
 0xC42FD45F6980B5A8 main.evolution.EvolutionType
 0xC441BD2D484CDB19 main.ui.btlspot.ui.BattleSpotUICategoryMode
 0xC4D8B6F820665C19 main.network.receiver.Routine
-0xC4F565B8C0514A1E 
+0xC4F565B8C0514A1E main.npc_management.traffic.parts._NpcTrafficUnit.NpcTrafficObjectFactoryType
 0xC5368CC1344AD1B4 main.ui.common_net_load.Status
-0xC59A3D960EDB4581 
-0xC62B54A0D44D3C5D 
+0xC59A3D960EDB4581 main.battle.ui.RaidRecoveryTimeState
+0xC62B54A0D44D3C5D main.field.behaviour.scenario.main.champion.gym.mushi._Gym_mushi_course_control.ActionType
 0xC6E5A097CBF27BB0 
 0xC8AD32ECFDA099D8 main.battle.ui.BattleUiSelectTargetState
-0xC9FE9F8A6CD1419E 
-0xCA466235A841D37A 
+0xC9FE9F8A6CD1419E main.ui.net_topmenu._NetTopMenuManager.NetTopMenuManagerState
+0xCA466235A841D37A main.ui.team_circle.TeamCircleDemoTmlState
 0xCB118FBF88F1B9E0 main.battle.director.OutType
 0xCE06CA51B0B61607 main.battle.PokemonType
-0xCE1129D096ACFC66 
-0xCE308D88B01858C4 
-0xCF97BBCEE3B785FE 
-0xD0C48EEDBC205F94 
+0xCE1129D096ACFC66 main.ui.btlspot.ui._BattleSpotUIHeader.BattleSpotUIHeaderState
+0xCE308D88B01858C4 main.field.action.field_npc.base.StateFieldNpcPokemon
+0xCF97BBCEE3B785FE main.ui.hud_announce.HudAnnounce_Status
+0xD0C48EEDBC205F94 main.field.gimmick.fixed_symbol.parts._FixedSymbolEffect.FixedSymbolEffectState
 0xD3509E72EAD01418 
-0xD3AB6DD2F2BA8D02 
+0xD3AB6DD2F2BA8D02 main.ui.btlspot.state_machine.common._BattleSpotStateCommonMatching.MatchFlowResult
 0xD55E2DB01384C1A6 main.ui.common_report.Status
 0xD720B4B007841B7A main.ui.btlspot.ui.BattleSpotUIMatchingMode
-0xD83431F952B7BFD4 
-0xDAE3CB0268E3BB23 
-0xDE28D8884AC253F5 
-0xDED97E0BA392EA71 
-0xDF002B45CA145036 
-0xE79CB3BBD3C21131 
+0xD83431F952B7BFD4 main.ui.net_topmenu.debug._NetworkTopMenuDebug.SceneState
+0xDAE3CB0268E3BB23 main.ui.pokelist.pokelist_state_machine.pokelist_battle_type._PokelistBattlePokeSwapState.PokelistBattleSwapState
+0xDE28D8884AC253F5 main.event.general.ajito.base.DanRushPossibleState
+0xDED97E0BA392EA71 main.event.popup_window.window_process.locator.PopupWindowLocatorType
+0xDF002B45CA145036 main.ui.net_topmenu._NetTopMenuUIManager.NetTopMenuUIManagerState
+0xE79CB3BBD3C21131 main.event.popup_window.window_process.finisher.PopupWindowFinisherType
 0xE7B78780CE84232A main.ui.btlspot.ui.BattleSpotUIMenuMode
 0xE7CA55C7033C7827 main.evolution.SequenceState
-0xEC2F3A8E9D9B88F6 
-0xEE042C275E6AD5D2 
-0xEE6A7D4177FA23E3 
-0xEF3B5F42B834EA43 
-0xEF9F73A9C6C8D8BB 
-0xEFCFB7C096878DDE 
-0xF0C0BA53D5AF96AD 
-0xF0F78D5139A1D592 
-0xF124106AB9B2DEE0 
-0xF25F7E7E555E3544 
-0xF297581DA5589B58 
+0xEC2F3A8E9D9B88F6 main.battle.ui.LimitTimeCautionWindowState
+0xEE042C275E6AD5D2 main.ui.btlspot.util.ReduceType
+0xEE6A7D4177FA23E3 main.npc_management.traffic.parts.NpcTrafficUnitCreateState
+0xEF3B5F42B834EA43 main.ui.status._StatusUISceneLoader.StatusSceneLoadState
+0xEF9F73A9C6C8D8BB main.battle.ui._BattleUiRaidPowerCharge.RaidPowerChargUIState
+0xEFCFB7C096878DDE main.event.general.gym.base._Gym_mizu_seri_master.SeriType
+0xF0C0BA53D5AF96AD main.ui.net_btl._NetworkBattleUISceneLoader.NetworkBattleSceneLoadState
+0xF0F78D5139A1D592 main.ui.bag.bag_ui_state_machine.SelectFormChangeState
+0xF124106AB9B2DEE0 main.ui.xmenu.xmenu_state_machine._XMenuLoadState.LoadState
+0xF25F7E7E555E3544 main.event.general.gym.base.DenkiTrainingState
+0xF297581DA5589B58 main.network.connect.LocalFlowResult
 0xF2A3236AFFB883B7 main.field.gimmick.RegistrationResult
 0xF54E111C927D0FDB 
 0xF54E121C927D118E 
-0xF664AB8067853EAC 
-0xF72D1682635C41A4 
+0xF664AB8067853EAC main.field.behaviour.module._TrafficStateModule.PairType
+0xF72D1682635C41A4 main.ui.xmenu.xmenu_state_machine._XMenuOptionState.OptionState
 0xF96073EDD2F4D302 main.ui.btlspot.ui.BattleSpotUITournamentMode
-0xF9D4FD7471CA355E 
-0xFADC9F4E76F5BB59 
-0xFADFBDD38526301B 
-0xFC610E3A4D87859E 
+0xF9D4FD7471CA355E main.battle.ui._BattleUiBallSelect.BattleUiBallSelectState
+0xFADC9F4E76F5BB59 main.field.behaviour.scenario.main.champion.gym.koori._Gym_koori_course_control.ActionType
+0xFADFBDD38526301B main.ui.btlstadium._BtlStadiumManager.SceneState
+0xFC610E3A4D87859E main.form_change.FormChangeDemoTmlState
 0xFCAF2E222042ED8F 
-0xFD7B9EC1AFA4DF17 
-0xFF3EBFB70F8ACE0D 
-0xFF4951B0A5F05FB8 
+0xFD7B9EC1AFA4DF17 main.battle.ui._BattleUiRaidPowerCharge.RaidPowerChargeTimerColor
+0xFF3EBFB70F8ACE0D main.playables.free_move.ctrl.module.IdlingMotionKind
+0xFF4951B0A5F05FB8 main.management.magical_exchange._MagicalExchangeManager.MagicalExchangeState
