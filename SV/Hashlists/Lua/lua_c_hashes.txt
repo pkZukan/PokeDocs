@@ -6,7 +6,7 @@
 0x00687E06D9FD2919 main.ui.tips.TipsState
 0x006E47193E40A09A main.ui.hairsalon.view.HairsalonShopUIView
 0x006E61A3A044A68A 
-0x007587C569A8BC4E 
+0x007587C569A8BC4E main.ui.staff_list.StaffListParamsManager
 0x0075A7EDE1FB9BE0 main.event.general.system.map_change.MapChangeAtlantis
 0x007A7FF8998A9E6B 
 0x00B1D62EE9D003D3 main.field.behaviour.scenario.main.champion.gym.kusa.GymKusaPokeEscapeArrivalState
@@ -269,7 +269,7 @@
 0x18CCA90F978E515D 
 0x18DAEFFEF200D39A main.event.debug.ui.DebugYMapNushiMissionStart
 0x18DF4E0745B920F9 main.nushi.hagane.HaganeNushiActor
-0x18EBEB0531CEF4AC 
+0x18EBEB0531CEF4AC main.form_change.FormChangeCamera
 0x18F7341104975258 main.event.debug.ui.DebugPokeListIconOffsetImgui
 0x18F76EE1FDB7BA1E main.field.behaviour.FieldTrafficNpcPokemon
 0x190C831375BA1994 
@@ -692,7 +692,7 @@
 0x3849D6AE07FDE2B7 main.event.debug.DebugNakayamaHiroki
 0x384CCABAF1EE53D7 
 0x385BD65F5D17CA47 
-0x386851A28D0B3FD5 
+0x386851A28D0B3FD5 main.event.general.gym.base.Gym_kusa_tree_process
 0x388798CF80F2AF9D main.ui.ymap.YMapGlobal
 0x38BAD817C90AC35C main.battle.ui.BattleUiTwoChoices
 0x38D93B6EEE09613F 
@@ -1720,7 +1720,7 @@
 0x843251A98B7460BF 
 0x843252A98B746272 
 0x843253A98B746425 
-0x84390F561DDED00C 
+0x84390F561DDED00C main.playables.free_move.effect.Cluster
 0x84402048F601B87E main.field.contents.poke_talk.PokeTalkEntity
 0x8440273733707A77 
 0x8446217F2E3C0F9E 
@@ -1737,7 +1737,7 @@
 0x850C1286D72EC257 main.pokepicnic.PicnicTableSetPosController
 0x850E69B34478276C main.gem.setting_tool.GemSettingManager
 0x85218EFF78D8D991 main.playables.misc.Statematon
-0x853E5113FB9150DB 
+0x853E5113FB9150DB main.ui.pokemon_select.PokemonSelectNetWorkData
 0x855CE97E56B02E46 
 0x8560CE7616F99CA2 
 0x8568A4DA5C1FB1A5 main.event.base.manager.EventSceneManager
@@ -1931,7 +1931,7 @@
 0x931098C27BA0B398 main.event.command.TipsCommand
 0x9325BDE4F9CD2D56 main.event.general.system.map_change.base.MapChangeC01Manager
 0x936A766C86F4DD53 main.ui.box.search.state.BoxSearchSeikakuTokuseiSelectState
-0x937502B651A9C086 
+0x937502B651A9C086 main.form_change.FormChangeInputParam
 0x937AE537C8AA5D6C main.management.originalbook.OriginalBookManager
 0x93A0ED567E185F6C 
 0x93AD5730452E26EC main.ui.raid_matching.RaidMatchingSceneLoader
@@ -2086,7 +2086,7 @@
 0xA1C378FF1F5733E6 
 0xA1F5014C1C7F3381 main.ui.shop.ShopUIManager
 0xA201AD72EC80BDB5 main.ajito.ui.startend.IStartEndUIView
-0xA2066FF2B4D27E0C 
+0xA2066FF2B4D27E0C main.ui.gym.IGym_test_view
 0xA207CE5D52146D26 main.ajito.system.AjitoProhibitController
 0xA212199382AA4A19 main.ui.status.StatusUISceneLoader
 0xA22E8B6AE052BFA1 
@@ -2146,7 +2146,7 @@
 0xA707B6DFF2E37829 
 0xA709ED1F29959FD6 main.ui.result.util.BattleResultUIUtil
 0xA71F0CDF966F3175 main.tml.TimeLineCommand
-0xA744D1E8C276D578 
+0xA744D1E8C276D578 main.npc_management.NpcSwitcher_Sub_025
 0xA77AD2087800F728 
 0xA7B7EE572282ACBA main.ui.pokelist.PokeListData
 0xA7CF9DA40689C95A main.event.popup_window.PopupWindowManager
@@ -2430,7 +2430,7 @@
 0xC1D0E294954F1D99 main.system.game_event.partner.GameEventSpawnPartner
 0xC1DEE21826977364 main.field.audio.PhysicsSoundModule
 0xC1E5A2395E0D4217 main.battle.ui.BattleUiCommandTimeCaution
-0xC1EC0F30B5116095 
+0xC1EC0F30B5116095 main.ui.system_ui.message_window.MessageWindowOkozukaiArgs
 0xC203D54DB82758CE main.field.behaviour.PokecenMonitor
 0xC21DA32C1CB4C7C5 main.field.behaviour.FieldTrafficNpc
 0xC22FA13B7E4B8CDD 
@@ -2519,7 +2519,7 @@
 0xC80EE53CD2FD8CBD 
 0xC816F24BFEF8251B main.event.base.common.IImportantPopupEvent
 0xC8239AA8A58CB33A main.ui.xmenu.XMenuTopView
-0xC8428E212046FF1D 
+0xC8428E212046FF1D main.npc_management.NpcSwitcher_Gym_mushi_020
 0xC85FA3EE862026B5 
 0xC8A26129E49B5550 main.field.action.c02elevator.ActionC02ElevatorMoveOnce
 0xC8A46EEF2B447F34 
@@ -2812,7 +2812,7 @@
 0xDC8BE7168FA5F67C 
 0xDC8F68168FA90786 
 0xDC8F6D168FA91005 
-0xDC92F3168FAC298E 
+0xDC92F3168FAC298E GetEx.Onbbutton_.ASpoke_fire
 0xDC95F6168FAE647E 
 0xDC95F9168FAE6997 
 0xDC95FA168FAE6B4A 
@@ -2985,7 +2985,7 @@
 0xE8E3FC751F6F89B8 main.system.light_direct_applier.GlobalLightDirectApplier
 0xE8EB417B0CF95F88 
 0xE8EB437B0CF962EE 
-0xE8EB447B0CF964A1 
+0xE8EB447B0CF964A1 SplatST5_.groupOQePokeData
 0xE8EB457B0CF96654 
 0xE8EB467B0CF96807 
 0xE8EB477B0CF969BA 
@@ -3113,7 +3113,7 @@
 0xF163251573CC843B main.nushi.data.HikoNushiData
 0xF16C6D03B33A9E7D main.ui.bag.bag_ui_state_machine.BagUIUseExpAmeState
 0xF1A43A3083B0F0E0 
-0xF1AF51FA0F63C425 
+0xF1AF51FA0F63C425 main.event.general.gym.base.Gym_denki_popup_window
 0xF1B52C3AB4C8EE6F 
 0xF1B91014068D2D0A main.battle.ui.BattleUiUtil
 0xF1BC0419D30C42CE main.ui.system_ui.SystemBg
@@ -3156,7 +3156,7 @@
 0xF4336E2049EB153D main.field.behaviour.DanPokemonFaintedMessage
 0xF43AD18CB9EB4E5D 
 0xF446125AFC320042 main.ui.net_btl.database.NetBattleRuleData
-0xF45A66B23ECB92F1 
+0xF45A66B23ECB92F1 main.npc_management.NpcSwitcherDataExpression
 0xF47162E578661B83 main.event.general.gym.base.Gym_mushi_goal_event
 0xF47A11EFEBD5C384 
 0xF4A50E37CFF15660 
