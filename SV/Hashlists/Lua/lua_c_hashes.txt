@@ -3262,7 +3262,7 @@
 0xFD1CCDD7948CBFE6 
 0xFD3A32F84D0BD550 main.ajito.ui.counter.KOUIView
 0xFD74BEB2381EA80F main.playables.free_move.trig.LadderEventTrigger
-0xFD9B049511E682DA 
+0xFD9B049511E682DA main.ui.hud_info.HudInfoPlayer
 0xFDA849ADBE85A43A main.battle.director.BattleEndGem
 0xFDDC2297F94B0EBC 
 0xFDE5B8FCCB68CEF2 
