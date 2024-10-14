@@ -300,7 +300,7 @@
 0x1BD887A037A298F4 main.env.animation.FullTimeAnimationBehaviour
 0x1C2173852B25740F 
 0x1C2474852B27AB99 
-0x1C26476CA4782287 
+0x1C26476CA4782287 dll_stadium.flow.RankBattleFlow
 0x1C27FA852B2AC522 
 0x1C2B80852B2DDEAB 
 0x1C2F06852B30F834 
@@ -639,7 +639,7 @@
 0x33EE914432E27C2A main.field.action.scenario.champion.gym.esper.ActionGymEsperPoke
 0x33F74D60EA7C2057 main.nushi.data.JimenNushiData
 0x33F9F0097F6D91E2 main.form_change.FormChangeMessage
-0x340B4EDF04C53E42 
+0x340B4EDF04C53E42 dll_stadium.flow.FlowBase
 0x344EECEB82872DC3 main.battle.director.BattleCaptureDemo
 0x344FD6AA27D34C29 main.ui.net_btl.ui.NetworkBattleUITeam
 0x346699D4BC4AE5F5 main.nushi.hiko.HikoNushiEvent020Setup
@@ -1365,7 +1365,7 @@
 0x686F1362D22EB3C2 main.playables.free_move.ctrl.req.AddTemporaryVelocityRequest
 0x6882B1154C695E5E 
 0x68C2E8DAFBC7ADDA main.ui.shop.data.friendly.ShopFriendlyData
-0x68E19F164EE82CB2 
+0x68E19F164EE82CB2 dll_stadium.StadiumAPI
 0x68E40F3A8F061A8D main.ui.net_btl.state_machine.NetworkBattleStateTeam
 0x690C42F3FAF568B7 main.event.popup_window.PopupWindowLayoutContorller
 0x691EE07F350A2B2E main.field.action.ActionAbsorbMove
@@ -1595,7 +1595,7 @@
 0x7B82718B7C539DDE 
 0x7B9F75A6ECDB20C6 main.event.debug.DebugEventJump
 0x7BC1C00972BBE070 main.ui.contents.poke_wash.view.PokeWashTopView
-0x7BDC89D93E3F29E5 
+0x7BDC89D93E3F29E5 dll_stadium.flow.CasualTopFlow
 0x7BE183DC9144DB60 main.event.general.system.map_change.MapChangeSchool
 0x7C001508067DB72E 
 0x7C062CEACCD73C07 main.npc_management.NpcSwitcher

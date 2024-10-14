@@ -26,7 +26,7 @@
 0x185C2285FF1A21B8 main.battle.ui.CommandTimeCautionWindowState
 0x188930210D7B9246 main.field.action.field_npc._ActionFieldNpcLookAtTarget.LookAtTarget
 0x1898AE800BCD6E76 main.field.behaviour.scenario.main.champion.gym.mushi.AnimationType
-0x18B9825906F730CF 
+0x18B9825906F730CF dll_stadium.flow.TopFlowUIWaiting
 0x19CA982E19C894B3 main.battle.parts.ZoomCameraTargetType
 0x200249B41F9595B5 main.evolution.EvolutionDemoTmlState
 0x218464FC4A930627 main.battle.State
@@ -49,15 +49,15 @@
 0x366415E12D9CEAB1 main.ui.system_ui.message_window.MessageWindowType
 0x36FFD97A711C2D29 main.field.exclusion_area.ExclusionAreaShapeDesc
 0x37501C4FB079F815 main.field_management._PlayerGazeManager.Target
-0x37B5FA12665B2997 
+0x37B5FA12665B2997 dll_stadium.flow.CasualTopFlow_UIWaiting
 0x37B96C515BA1BBD4 main.event.general.gym.base.BgmType
 0x38B7F1DDED5027FE main.field.behaviour.scenario.main.champion.gym.kusa.AnimationType
 0x396C103D92DB224E main.ui.btlspot.ui.BattleSpotUIRankUpMode
 0x3B3CF19DBB51596A main.event.general.gym.base._Gym_mizu_seri_buyer_player.SelectType
-0x3B7F0D92802792CD 
-0x3D00E8B4A3F271D6 
+0x3B7F0D92802792CD dll_stadium.ReduceType
+0x3D00E8B4A3F271D6 dll_stadium.flow.CasualTopFlow_TopMenuSelect
 0x400D8CAA1B9C4210 main.ui.photomode.interfaces.ui.model.PhotomodeUIMode
-0x4188FFC8E4C958D0 
+0x4188FFC8E4C958D0 dll_stadium.flow.RankBattleFlowUIWaiting
 0x4224DD9032335D70 main.ui.leaguecard.state.LeagueCardState
 0x4330DFB428FDF515 main.ui.net_btl.ui.MessageType
 0x453241258B312983 main.system.game_event.FailedRideType
@@ -130,9 +130,9 @@
 0x98E78CBD490EFA6A main.playables.free_move.ctrl.req.SelfieAction
 0x9A51BE4A7E22720B main.ui.leaguecard.ui.top.LeagueCardScrollState
 0x9B765D342AB2364B main.ui.status.state_machine.skill._StatusStateSkillBag.StatusStateInfoBagState
-0x9DA73E58873533CD 
+0x9DA73E58873533CD main_dynamic.event.scenario.main.legend._Legend_0100.PackageTypeID
 0xA0D5CB7A688EBC4C main.system.game_event.Routine
-0xA226F8E4BD8D9C87 
+0xA226F8E4BD8D9C87 dll_stadium.flow.RankTopMenuType
 0xA4552630426F1460 main.field.behaviour.scenario.main.champion.gym.koori.CourseState
 0xA76FBEE031C2173E main.ui.btlspot.net.NetErrorType
 0xA7ABBE7E5938AC86 main.network.connect.InternetFlowResult
@@ -143,7 +143,7 @@
 0xAF85302BE96D9BA7 main.field.action.field_npc.base.StateFieldNpc
 0xAFC933BC1EDD8023 main.form_change.FormChangeType
 0xAFE6C9339A36B5EE main.battle.SickEffectState
-0xB0872E7555AC4631 
+0xB0872E7555AC4631 dll_stadium.flow.RankTopFlowUIWaiting
 0xB358450E5C6E7CA7 main.ui.team_circle.TeamMemberStatus
 0xB36879ACEEB624C4 main.field.gimmick.fixed_symbol.parts._FixedSymbolSave.FixedSymbolSaveTimeCycleType
 0xB375BC9C13B3E957 main.ui.btlspot.state_machine.common.BattleSpotStateCommonMatchingType
@@ -168,7 +168,7 @@
 0xC5368CC1344AD1B4 main.ui.common_net_load.Status
 0xC59A3D960EDB4581 main.battle.ui.RaidRecoveryTimeState
 0xC62B54A0D44D3C5D main.field.behaviour.scenario.main.champion.gym.mushi._Gym_mushi_course_control.ActionType
-0xC6E5A097CBF27BB0 
+0xC6E5A097CBF27BB0 dll_stadium.CasualBattleType
 0xC8AD32ECFDA099D8 main.battle.ui.BattleUiSelectTargetState
 0xC9FE9F8A6CD1419E main.ui.net_topmenu._NetTopMenuManager.NetTopMenuManagerState
 0xCA466235A841D37A main.ui.team_circle.TeamCircleDemoTmlState
@@ -178,7 +178,7 @@
 0xCE308D88B01858C4 main.field.action.field_npc.base.StateFieldNpcPokemon
 0xCF97BBCEE3B785FE main.ui.hud_announce.HudAnnounce_Status
 0xD0C48EEDBC205F94 main.field.gimmick.fixed_symbol.parts._FixedSymbolEffect.FixedSymbolEffectState
-0xD3509E72EAD01418 
+0xD3509E72EAD01418 dll_stadium.NetErrorType
 0xD3AB6DD2F2BA8D02 main.ui.btlspot.state_machine.common._BattleSpotStateCommonMatching.MatchFlowResult
 0xD55E2DB01384C1A6 main.ui.common_report.Status
 0xD720B4B007841B7A main.ui.btlspot.ui.BattleSpotUIMatchingMode
@@ -202,8 +202,8 @@
 0xF25F7E7E555E3544 main.event.general.gym.base.DenkiTrainingState
 0xF297581DA5589B58 main.network.connect.LocalFlowResult
 0xF2A3236AFFB883B7 main.field.gimmick.RegistrationResult
-0xF54E111C927D0FDB 
-0xF54E121C927D118E 
+0xF54E111C927D0FDB dll_stadium.StadiumAPIResult2
+0xF54E121C927D118E dll_stadium.StadiumAPIResult1
 0xF664AB8067853EAC main.field.behaviour.module._TrafficStateModule.PairType
 0xF72D1682635C41A4 main.ui.xmenu.xmenu_state_machine._XMenuOptionState.OptionState
 0xF96073EDD2F4D302 main.ui.btlspot.ui.BattleSpotUITournamentMode
