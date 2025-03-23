@@ -673,7 +673,7 @@
 | 96% | 156 | 6 | @arc\worlddatafieldcharacter_facial_systemcharacter_facial_system_data_rootcharacter_facial_system_data_root.bin.trpak |
 | 71% | 20 | 8 | @arc\worlddatapicnicpicnic_systemdefault_system_data.bin.trpak |
 | 82% | 23 | 5 | @arc\worlddatapokemonaipokemon_ai_nature_tablepokemon_ai_nature_table_array.bfbs.trpak |
-| 95% | 341 | 17 | @arc\worlddatapokemonwildwild_pokemon_common_datawild_pokemon_common_data.bin.trpak |
+| 96% | 345 | 13 | @arc\worlddatapokemonwildwild_pokemon_common_datawild_pokemon_common_data.bin.trpak |
 | 97% | 68 | 2 | @arc\worlddataraidraid_gem_item_reward_boostdata.bin.trpak |
 | 96% | 1864 | 59 | @arc\worldobj_templatepartsenvmeteor_meteor_0.trsot.trpak |
 | 96% | 1864 | 59 | @arc\worldobj_templatepartsenvmeteor_meteor_1.trsot.trpak |
