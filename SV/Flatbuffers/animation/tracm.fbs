@@ -3,20 +3,33 @@ namespace Titan.Animation;
 file_extension "tracm";
 
 union TrackFlag {
-    TrackFlag_Bool,
+  FixedBoolTrack,
+  DynamicBoolTrack,
+  Framed16BoolTrack,
+  Framed8BoolTrack,
 }
-
-table TrackFlag_Bool {
+table FixedBoolTrack {
     value: bool;
+}
+table DynamicBoolTrack {
+    value: [bool];
+}
+table Framed16BoolTrack {
+	frames: [uint16];
+    value: [bool];
+}
+table Framed8BoolTrack {
+	frames: [uint8];
+    value: [bool];
 }
 
 table TrackFlagsInfo {
     values: TrackFlag;
 }
 
-table TrackFlags {
-    res_0: uint32;
-    res_1: uint32;
+table VisibilityShapeTimeline {
+    time: float;
+    value: float;
     info: TrackFlagsInfo;
 }
 
@@ -84,6 +97,8 @@ table Framed8BlendTrack {
     value: [float];
 }
 union BlendTrack { FixedBlendTrack, DynamicBlendTrack, Framed16BlendTrack, Framed8BlendTrack }
+
+
 table TrackBlendshapeAnim {
     key: uint32;
 	values: [float];
@@ -114,7 +129,7 @@ table Track {
     res_2: uint32; //Never used
     res_3: uint32; //Never used
     material_animation: TrackMaterialTimeline;
-    material_flags: TrackFlags;
+    visibility_animation: VisibilityShapeTimeline;
 	blendshape_animation: BlendShapeTimeline;
 }
 
@@ -127,9 +142,9 @@ table TrackConfig {
 table TRACM {
     config: TrackConfig;
     tracks: [Track];
-    len_1: uint8; //Related to length of tracks?
-    len_2: uint8; //Related to length of tracks?
-	unk_4: uint8;
+    material_frame_multiplier: uint8;
+    visibility_frame_multiplier: uint8;
+	blendshape_frame_multiplier: uint8;
 }
 
 root_type TRACM;
