@@ -102,7 +102,7 @@ table CameraAnim2 {
     translation: VectorTrack;
     unk_2: VectorTrack;
     unk_3: VectorTrack;
-    unk_4: VectorTrack;
+    unk_4: FloatTrack;
 }
 
 table CamAnimation {
