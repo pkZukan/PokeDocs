@@ -1,0 +1,29 @@
+// This requires the trinity ScenePoint schema to work
+// It can be found here: https://github.com/pkZukan/PokeDocs/blob/main/SV/Flatbuffers/scene/trinity_ScenePoint.fbs
+// trinity ScenePoint requires common.fbs, which can be found here: https://github.com/pkZukan/PokeDocs/blob/main/SV/Flatbuffers/scene/common.fbs
+
+// This schema was meant for data\world\ik_scene\ui\map_icon_scene_point_\map_icon_scene_point_0.trscn
+// Which contains static map icon positions for things like shopping, pokemon centers, wild zones, rogue megas, etc.
+
+include "trinity_ScenePoint.fbs";
+
+namespace ikkaku_mapIconScenePoint;
+
+table ikkaku_mapIconData {
+    point_type: string;
+    data: [ubyte] (nested_flatbuffer: "Titan.TrinityScene.trinity_ScenePoint");
+    unk1: byte;
+    unk2: uint;
+}
+
+table ikkaku_mapIcons {
+    name: string;
+    node_type: string;
+    unk1: uint32;
+    unk2: uint32;
+    points: [ikkaku_mapIconData];
+    unk3: uint;
+    unk4: bool;
+}
+
+root_type ikkaku_mapIcons;
