@@ -1,0 +1,36 @@
+
+enum ClothingType : uint {
+  Top = 0,
+  Bottom = 1,
+  AllInOne = 2,
+  Headwear = 3,
+  Eyewear = 4,
+  Gloves = 5,
+  Legwear = 6,
+  Footwear = 7,
+  Satchels = 8,
+  Earrings = 9
+}
+
+table Item {
+  id: uint; // field0
+  type: string; // field1
+  clothingGroup: ClothingType; // field2
+  texturePath: string; // field3
+  unk0: uint; // field4
+  unk1: uint; // field5
+  primaryColor: string; // field6
+  secondaryColor: string; // field7
+  unk2: bool; // field8
+  reserved: uint; // field9
+  uiIndex: uint; // field10
+  unk3: bool; // field12
+}
+
+
+
+table Root {
+  items: [Item];
+}
+
+root_type Root;
