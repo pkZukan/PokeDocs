@@ -22,8 +22,9 @@ table Item {
   primaryColor: string; // field6
   secondaryColor: string; // field7
   unk2: bool; // field8
-  reserved: uint; // field9
+  price: uint; // field9
   uiIndex: uint; // field10
+  subtype: string; // field11, just for footwear
   unk3: bool; // field12
 }
 
