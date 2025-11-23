@@ -1,0 +1,43 @@
+namespace Titan.Resource;
+
+file_extension "trpmcatalog";
+
+table VersionInfo {
+    version: uint32;
+}
+
+table SpeciesInfo {
+    species: uint16;
+    form: uint16;
+    gender: uint8;
+}
+
+table AnimationInfo {
+    form_number: int16;
+    path: string;
+}
+
+table LocatorInfo {
+    form_number: int16;
+    loc_index: uint8;
+    loc_path: string;
+}
+
+table CatalogEntry {
+    species_info : SpeciesInfo;
+    model_path: string;
+    material_table_path: string;
+    config_path: string;
+    animations: [AnimationInfo];
+    locators: [LocatorInfo];
+    icon_path: string;
+    unk_id: uint32;
+    defence_path: string;
+}
+
+table Catalog {
+    version : VersionInfo;
+    table: [CatalogEntry];
+}
+
+root_type Catalog;
