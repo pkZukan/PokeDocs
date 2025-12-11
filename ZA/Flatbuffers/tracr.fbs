@@ -1,0 +1,62 @@
+namespace Titan.Animation;
+
+table AnimationResource {
+  filename: string;
+}
+
+table MaterialResource {
+  filename: string;
+}
+
+table EffectResource {
+  filename: string;
+}
+
+table CurveResource {
+  filename: string;
+}
+
+table TrackResources {
+  animation: AnimationResource;
+  material:  MaterialResource;
+  effect:    EffectResource;
+  curve:     CurveResource;
+}
+
+table Track {
+  track_name: string;
+  res_0: uint32;
+  res_1: uint32;
+  track_resource: TrackResources;
+}
+
+table TurnNamedTrack {
+  filename: string;
+}
+
+table TurnBase {
+  base_name: string;
+  flags:     uint32;
+}
+
+table TurnBlendEntry {
+  track:  TurnNamedTrack;
+  weight: float;
+}
+
+table TurnGroup {
+  name:    string;
+  base:    TurnBase;
+  entries: [TurnBlendEntry];
+}
+
+table TrackList {
+  list:        [Track];
+  turn_groups: [TurnGroup];
+}
+
+table TRACR {
+  track_list: TrackList;
+}
+
+root_type TRACR;
