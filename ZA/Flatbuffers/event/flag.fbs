@@ -1,0 +1,9 @@
+table Flag {
+    name: string;
+}
+
+table Root {
+    items: [Flag];
+}
+
+root_type Root;
